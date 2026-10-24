@@ -1,0 +1,29 @@
+/* Header bell + dropdown, and the /notifikasi list. Unread rows sit on
+   --brand-soft, where --muted drops to 4.4:1, so their meta text is --ink-2. */
+.bell { position: relative; }
+.bell-badge { position: absolute; top: 2px; left: 20px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 99px; background: var(--sale); color: #fff; font-size: 11px; font-weight: 700; display: grid; place-items: center; border: 2px solid var(--surface); }
+.bell-panel { position: absolute; right: 0; top: calc(100% + 8px); z-index: 40; width: min(380px, calc(100vw - 32px)); background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); box-shadow: var(--sh-3); overflow: hidden; }
+.bell-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+.bell-list { max-height: 420px; overflow-y: auto; }
+.bell-list .empty { padding: 24px 14px; }
+.bell-foot { display: block; padding: 12px 14px; border-top: 1px solid var(--line); text-align: center; font-size: 13px; font-weight: 600; }
+.bell-foot:hover { background: var(--canvas); }
+
+.ntf { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; gap: 10px; align-items: start; width: 100%; padding: 12px 14px; border: 0; border-bottom: 1px solid var(--line); background: var(--surface); color: var(--ink); font: inherit; text-align: left; cursor: pointer; }
+.ntf:last-child { border-bottom: 0; }
+.ntf:hover { background: var(--canvas); }
+.ntf.is-unread { background: var(--brand-soft); }
+.ntf-ico { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: var(--info-soft); color: var(--info); }
+.ntf-ico.tone-success { background: var(--ok-soft); color: var(--ok); }
+.ntf-ico.tone-warning { background: var(--sale-soft); color: var(--sale); }
+.ntf-ico .ico { width: 18px; height: 18px; }
+.ntf-text { display: grid; gap: 2px; font-size: 13px; }
+.ntf-text b { font-weight: 600; }
+.ntf-text span { color: var(--ink-2); }
+.ntf-text small { font-size: 12px; color: var(--muted); }
+.ntf.is-unread .ntf-text small { color: var(--ink-2); }
+.ntf-dot { width: 8px; height: 8px; margin-top: 6px; border-radius: 99px; background: var(--sale); }
+
+.ntf-tools { display: flex; justify-content: flex-end; }
+.ntf-group { margin: 0 0 8px; font: 600 13px var(--f-body); color: var(--muted); }
+.ntf-list { padding: 0; gap: 0; overflow: hidden; }

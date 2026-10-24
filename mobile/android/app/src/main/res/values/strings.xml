@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Naraya Sales</string>
+    <string name="title_activity_main">Naraya Sales</string>
+    <string name="package_name">id.naraya.sales</string>
+    <string name="custom_url_scheme">id.naraya.sales</string>
+</resources>

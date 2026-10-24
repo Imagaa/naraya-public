@@ -1,0 +1,49 @@
+services:
+  app:
+    build: .
+    volumes:
+      - ./:/var/www/html
+      # vendor/ and the package cache come from the image (fast Docker volume), not the
+      # Windows bind mount: reading thousands of vendor files over it made every request 5–12 s.
+      # After a composer.json change: docker compose build app && docker compose down -v (or remove these two volumes).
+      - vendor:/var/www/html/vendor
+      - bootstrap-cache:/var/www/html/bootstrap/cache
+    env_file: .env
+    depends_on: [db, redis, garage]
+
+  nginx:
+    image: nginx:alpine
+    ports: ["${APP_PORT:-8080}:80"]
+    volumes:
+      - ./:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on: [app]
+
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: naraya
+      MYSQL_USER: naraya
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+    volumes: ["db-data:/var/lib/mysql"]
+    ports: ["3306:3306"]
+
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+
+  garage:
+    image: dxflrs/garage:v1.0.1
+    environment:
+      GARAGE_RPC_SECRET: ${GARAGE_RPC_SECRET}
+    volumes:
+      - ./docker/garage/garage.toml:/etc/garage.toml
+      - garage-data:/var/lib/garage
+    ports: ["3900:3900", "3901:3901", "3902:3902"]
+
+volumes:
+  db-data:
+  garage-data:
+  vendor:
+  bootstrap-cache:

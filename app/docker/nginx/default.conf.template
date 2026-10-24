@@ -1,0 +1,32 @@
+server {
+    listen ${PORT};
+    server_name naraya.test admin.naraya.test sales.naraya.test _;
+    root /var/www/html/public;
+    index index.php;
+
+    # Above Livewire's 12 MB temporary upload (nginx's default 1 MB rejected phone photos with 413).
+    client_max_body_size 20m;
+
+    # Railway's private-network IPs change on every app redeploy — a bare
+    # fastcgi_pass hostname is resolved once at nginx startup and goes stale
+    # until nginx restarts. A variable forces per-request resolution via the
+    # resolver below instead.
+    resolver [fd12::10] valid=10s;
+    set $app_upstream app.railway.internal:9000;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass $app_upstream;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_read_timeout 300s;
+    }
+
+    location ~ /\.(?!well-known).* {
+        deny all;
+    }
+}

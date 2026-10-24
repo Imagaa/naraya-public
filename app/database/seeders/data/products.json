@@ -1,0 +1,2324 @@
+[
+    {
+        "barcode": "0711844110182",
+        "name": "Abc Kecap Manis",
+        "brand": "Abc",
+        "size": "75g",
+        "category": "Bumbu Dapur",
+        "image": "0711844110182.jpg",
+        "source": "https://world.openfoodfacts.org/product/0711844110182"
+    },
+    {
+        "barcode": "8994171101784",
+        "name": "Abc Sambal Extra Pedas",
+        "brand": null,
+        "size": "1",
+        "category": "Bumbu Dapur",
+        "image": "8994171101784.jpg",
+        "source": "https://world.openfoodfacts.org/product/8994171101784"
+    },
+    {
+        "barcode": "8994907001302",
+        "name": "Abc Sambal Terasi",
+        "brand": "Abc",
+        "size": null,
+        "category": "Bumbu Dapur",
+        "image": "8994907001302.jpg",
+        "source": "https://world.openfoodfacts.org/product/8994907001302"
+    },
+    {
+        "barcode": "7118441101378",
+        "name": "Abc kecap ref 520ml",
+        "brand": null,
+        "size": "1",
+        "category": "Bumbu Dapur",
+        "image": "7118441101378.jpg",
+        "source": "https://world.openfoodfacts.org/product/7118441101378"
+    },
+    {
+        "barcode": "0711844130050",
+        "name": "Abc tomato ketchup saus tomat",
+        "brand": null,
+        "size": "1 kg",
+        "category": "Bumbu Dapur",
+        "image": "0711844130050.jpg",
+        "source": "https://world.openfoodfacts.org/product/0711844130050"
+    },
+    {
+        "barcode": "8992770096234",
+        "name": "Ajinomoto Saori Saus Teriyaki",
+        "brand": "Ajinomoto",
+        "size": "275ml",
+        "category": "Bumbu Dapur",
+        "image": "8992770096234.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992770096234"
+    },
+    {
+        "barcode": "8992770096135",
+        "name": "Ajinomoto Saori Saus Tiram",
+        "brand": "Ajinomoto",
+        "size": "270ml",
+        "category": "Bumbu Dapur",
+        "image": "8992770096135.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992770096135"
+    },
+    {
+        "barcode": "8994016003570",
+        "name": "Alfamart Lada Putih 50g",
+        "brand": null,
+        "size": "1",
+        "category": "Bumbu Dapur",
+        "image": "8994016003570.jpg",
+        "source": "https://world.openfoodfacts.org/product/8994016003570"
+    },
+    {
+        "barcode": "8992735250909",
+        "name": "Bamboe Bumbu Kuah Bakso",
+        "brand": "bamboe",
+        "size": "60g",
+        "category": "Bumbu Dapur",
+        "image": "8992735250909.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992735250909"
+    },
+    {
+        "barcode": "8992735210033",
+        "name": "Bamboe Bumbu Opor",
+        "brand": "Bamboe",
+        "size": "36g",
+        "category": "Bumbu Dapur",
+        "image": "8992735210033.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992735210033"
+    },
+    {
+        "barcode": "8992735249767",
+        "name": "Bamboe Bumbu Rica-rica",
+        "brand": "Bamboe",
+        "size": "90g",
+        "category": "Bumbu Dapur",
+        "image": "8992735249767.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992735249767"
+    },
+    {
+        "barcode": "8992735210064",
+        "name": "Bamboe Bumbu Soto Ayam",
+        "brand": "Bamboe",
+        "size": "40g",
+        "category": "Bumbu Dapur",
+        "image": "8992735210064.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992735210064"
+    },
+    {
+        "barcode": "0089686598476",
+        "name": "Chitato Ayam Bumbu 68gr",
+        "brand": null,
+        "size": "1",
+        "category": "Bumbu Dapur",
+        "image": "0089686598476.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686598476"
+    },
+    {
+        "barcode": "0089686598599",
+        "name": "Chitato Sapi Bumbu Bakar 68gr",
+        "brand": null,
+        "size": "1",
+        "category": "Bumbu Dapur",
+        "image": "0089686598599.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686598599"
+    },
+    {
+        "barcode": "8998888710147",
+        "name": "Del Monte",
+        "brand": "Del Monte",
+        "size": "270ml",
+        "category": "Bumbu Dapur",
+        "image": "8998888710147.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998888710147"
+    },
+    {
+        "barcode": "8991818110048",
+        "name": "Finna Nasi Goreng",
+        "brand": "Finna",
+        "size": "50g",
+        "category": "Bumbu Dapur",
+        "image": "8991818110048.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991818110048"
+    },
+    {
+        "barcode": "0089686386110",
+        "name": "Indofood Racik Bumbu Sayur Asem",
+        "brand": "Indofood",
+        "size": "33g",
+        "category": "Bumbu Dapur",
+        "image": "0089686386110.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686386110"
+    },
+    {
+        "barcode": "0089686400359",
+        "name": "Indofood Sambal Pedas",
+        "brand": "Indofood",
+        "size": "275 ml",
+        "category": "Bumbu Dapur",
+        "image": "0089686400359.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686400359"
+    },
+    {
+        "barcode": "8991199122197",
+        "name": "Karangsari Sambel Pecel Pedas",
+        "brand": "Karangsari",
+        "size": "200 gram",
+        "category": "Bumbu Dapur",
+        "image": "8991199122197.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991199122197"
+    },
+    {
+        "barcode": "8991199222194",
+        "name": "Karangsari Sambel Pecel Sedang",
+        "brand": "Karangsari",
+        "size": "200 gram",
+        "category": "Bumbu Dapur",
+        "image": "8991199222194.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991199222194"
+    },
+    {
+        "barcode": "8997232270016",
+        "name": "Kecap asin sari ikan cap burung kiwi",
+        "brand": "Kiwi",
+        "size": "600ml",
+        "category": "Bumbu Dapur",
+        "image": "8997232270016.jpg",
+        "source": "https://world.openfoodfacts.org/product/8997232270016"
+    },
+    {
+        "barcode": "8995899209141",
+        "name": "Kobe BonCabe Rasa Ikan Roa",
+        "brand": "Kobe",
+        "size": "40 g",
+        "category": "Bumbu Dapur",
+        "image": "8995899209141.jpg",
+        "source": "https://world.openfoodfacts.org/product/8995899209141"
+    },
+    {
+        "barcode": "8995899280157",
+        "name": "Kobe Selera",
+        "brand": "Kobe",
+        "size": "170g",
+        "category": "Bumbu Dapur",
+        "image": "8995899280157.jpg",
+        "source": "https://world.openfoodfacts.org/product/8995899280157"
+    },
+    {
+        "barcode": "8888900600115",
+        "name": "La Fonte Bolognese Sauce",
+        "brand": null,
+        "size": "1",
+        "category": "Bumbu Dapur",
+        "image": "8888900600115.jpg",
+        "source": "https://world.openfoodfacts.org/product/8888900600115"
+    },
+    {
+        "barcode": "8997232590237",
+        "name": "Panah merah Benih Selada Grand Rapids",
+        "brand": "Panah merah",
+        "size": "10092840",
+        "category": "Bumbu Dapur",
+        "image": "8997232590237.jpg",
+        "source": "https://world.openfoodfacts.org/product/8997232590237"
+    },
+    {
+        "barcode": "8992845859962",
+        "name": "Primaagung Saus karbonara",
+        "brand": "Primaagung",
+        "size": "500g",
+        "category": "Bumbu Dapur",
+        "image": "8992845859962.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992845859962"
+    },
+    {
+        "barcode": "8999999516208",
+        "name": "Royco Ayam 230gr",
+        "brand": "Royco",
+        "size": "1",
+        "category": "Bumbu Dapur",
+        "image": "8999999516208.jpg",
+        "source": "https://world.openfoodfacts.org/product/8999999516208"
+    },
+    {
+        "barcode": "8999999557058",
+        "name": "Royco Kaldu Rasa Jamur 40g",
+        "brand": "Royco",
+        "size": "1",
+        "category": "Bumbu Dapur",
+        "image": "8999999557058.jpg",
+        "source": "https://world.openfoodfacts.org/product/8999999557058"
+    },
+    {
+        "barcode": "8999999502393",
+        "name": "Royco Rasa Sapi",
+        "brand": "Royco",
+        "size": "8g",
+        "category": "Bumbu Dapur",
+        "image": "8999999502393.jpg",
+        "source": "https://world.openfoodfacts.org/product/8999999502393"
+    },
+    {
+        "barcode": "8992984910142",
+        "name": "Saus cabe dua belibis",
+        "brand": null,
+        "size": "235 ml",
+        "category": "Bumbu Dapur",
+        "image": "8992984910142.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992984910142"
+    },
+    {
+        "barcode": "8801005931472",
+        "name": "Soondubu Jjigae Sauce 110G Sp 24",
+        "brand": null,
+        "size": "110g",
+        "category": "Bumbu Dapur",
+        "image": "8801005931472.jpg",
+        "source": "https://world.openfoodfacts.org/product/8801005931472"
+    },
+    {
+        "barcode": "8991818801519",
+        "name": "Uleg Sambal Geprek",
+        "brand": "Uleg",
+        "size": "18g",
+        "category": "Bumbu Dapur",
+        "image": "8991818801519.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991818801519"
+    },
+    {
+        "barcode": "8991818801083",
+        "name": "Uleg sambal teri sac 10x20g",
+        "brand": null,
+        "size": "2",
+        "category": "Bumbu Dapur",
+        "image": "8991818801083.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991818801083"
+    },
+    {
+        "barcode": "8999999514006",
+        "name": "Unilever Bango kecap manis refill",
+        "brand": "Unilever",
+        "size": "60 ml",
+        "category": "Bumbu Dapur",
+        "image": "8999999514006.jpg",
+        "source": "https://world.openfoodfacts.org/product/8999999514006"
+    },
+    {
+        "barcode": "8998888111142",
+        "name": "Del Monte Caffe latte",
+        "brand": "Del Monte",
+        "size": "240ml",
+        "category": "Kopi & Teh",
+        "image": "8998888111142.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998888111142"
+    },
+    {
+        "barcode": "8998888111241",
+        "name": "Del Monte Vanilla latte",
+        "brand": "Del Monte",
+        "size": "240 ml",
+        "category": "Kopi & Teh",
+        "image": "8998888111241.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998888111241"
+    },
+    {
+        "barcode": "8991998110012",
+        "name": "Delizio Caffino",
+        "brand": "kopi latte classic",
+        "size": "20 g",
+        "category": "Kopi & Teh",
+        "image": "8991998110012.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991998110012"
+    },
+    {
+        "barcode": "8991998110210",
+        "name": "Delizio Caffino Kopi Latte Choco Hazelnut",
+        "brand": "Delizio Caffino",
+        "size": "20 g",
+        "category": "Kopi & Teh",
+        "image": "8991998110210.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991998110210"
+    },
+    {
+        "barcode": "7997240730039",
+        "name": "Forestly Green Tea Latte",
+        "brand": null,
+        "size": "2",
+        "category": "Kopi & Teh",
+        "image": "7997240730039.jpg",
+        "source": "https://world.openfoodfacts.org/product/7997240730039"
+    },
+    {
+        "barcode": "8998866201841",
+        "name": "Golda Coffee Latte",
+        "brand": "wings food",
+        "size": "200ml",
+        "category": "Kopi & Teh",
+        "image": "8998866201841.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998866201841"
+    },
+    {
+        "barcode": "8991002103238",
+        "name": "Good Day Mocacinno",
+        "brand": "Good day",
+        "size": "4",
+        "category": "Kopi & Teh",
+        "image": "8991002103238.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991002103238"
+    },
+    {
+        "barcode": "8991002121010",
+        "name": "Good day funtastic mocachino",
+        "brand": "kapal api group",
+        "size": "250ml",
+        "category": "Kopi & Teh",
+        "image": "8991002121010.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991002121010"
+    },
+    {
+        "barcode": "8997218380197",
+        "name": "Ichitan cold classic latte",
+        "brand": null,
+        "size": "1",
+        "category": "Kopi & Teh",
+        "image": "8997218380197.jpg",
+        "source": "https://world.openfoodfacts.org/product/8997218380197"
+    },
+    {
+        "barcode": "9311931024036",
+        "name": "Indocafe Coffeemix 3 in 1",
+        "brand": "Indocafe",
+        "size": "20 g",
+        "category": "Kopi & Teh",
+        "image": "9311931024036.jpg",
+        "source": "https://world.openfoodfacts.org/product/9311931024036"
+    },
+    {
+        "barcode": "8993371100115",
+        "name": "Intra Jahe Wangi",
+        "brand": "Intra",
+        "size": "300 g (20 x 15 g)",
+        "category": "Kopi & Teh",
+        "image": "8993371100115.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993371100115"
+    },
+    {
+        "barcode": "8991002306813",
+        "name": "Kapal Api Espresso Kopi Susu",
+        "brand": "Kapal Api",
+        "size": "135 g",
+        "category": "Kopi & Teh",
+        "image": "8991002306813.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991002306813"
+    },
+    {
+        "barcode": "8991002105485",
+        "name": "Kapal Api Special Mix",
+        "brand": "santosa jaya abadi",
+        "size": "240g",
+        "category": "Kopi & Teh",
+        "image": "8991002105485.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991002105485"
+    },
+    {
+        "barcode": "8991749000036",
+        "name": "Kopi kenangan avocuddle",
+        "brand": "Kopi kenangan",
+        "size": "6",
+        "category": "Kopi & Teh",
+        "image": "8991749000036.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991749000036"
+    },
+    {
+        "barcode": "8991749000012",
+        "name": "Kopi kenangan black aren",
+        "brand": null,
+        "size": "6",
+        "category": "Kopi & Teh",
+        "image": "8991749000012.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991749000012"
+    },
+    {
+        "barcode": "8996001321188",
+        "name": "Kopiko Coffe Candy",
+        "brand": "Kopiko",
+        "size": "5",
+        "category": "Kopi & Teh",
+        "image": "8996001321188.jpg",
+        "source": "https://world.openfoodfacts.org/product/8996001321188"
+    },
+    {
+        "barcode": "9311931202205",
+        "name": "MaxTea Lemon Tea",
+        "brand": "MaxTea",
+        "size": "25 g",
+        "category": "Kopi & Teh",
+        "image": "9311931202205.jpg",
+        "source": "https://world.openfoodfacts.org/product/9311931202205"
+    },
+    {
+        "barcode": "8992775712788",
+        "name": "My Tea olong",
+        "brand": null,
+        "size": "1",
+        "category": "Kopi & Teh",
+        "image": "8992775712788.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992775712788"
+    },
+    {
+        "barcode": "8992775712603",
+        "name": "My tea poci",
+        "brand": null,
+        "size": "1",
+        "category": "Kopi & Teh",
+        "image": "8992775712603.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992775712603"
+    },
+    {
+        "barcode": "9556001288561",
+        "name": "Nescafe caramel macchiato 220",
+        "brand": "Nescafe",
+        "size": "1",
+        "category": "Kopi & Teh",
+        "image": "9556001288561.jpg",
+        "source": "https://world.openfoodfacts.org/product/9556001288561"
+    },
+    {
+        "barcode": "9556001288592",
+        "name": "Nescafr latte 220ml",
+        "brand": null,
+        "size": "1",
+        "category": "Kopi & Teh",
+        "image": "9556001288592.jpg",
+        "source": "https://world.openfoodfacts.org/product/9556001288592"
+    },
+    {
+        "barcode": "8992388101023",
+        "name": "NÜ Green Tea Rasa Madu",
+        "brand": "Abc",
+        "size": "450ml",
+        "category": "Kopi & Teh",
+        "image": "8992388101023.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992388101023"
+    },
+    {
+        "barcode": "8991102222006",
+        "name": "OT ( Orang Tua) Teh Gelas Cup",
+        "brand": "OT ( Orang Tua)",
+        "size": "160ml",
+        "category": "Kopi & Teh",
+        "image": "8991102222006.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991102222006"
+    },
+    {
+        "barcode": "8991998118315",
+        "name": "Savoria Kopi Tubruk Gadjah",
+        "brand": "Savoria",
+        "size": "23",
+        "category": "Kopi & Teh",
+        "image": "8991998118315.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991998118315"
+    },
+    {
+        "barcode": "8991001112910",
+        "name": "Silver Queen Green Tea Matcha",
+        "brand": "Ceres",
+        "size": "58 g",
+        "category": "Kopi & Teh",
+        "image": "8991001112910.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991001112910"
+    },
+    {
+        "barcode": "8991001112903",
+        "name": "Silver Queen Grentea Matcha 22gr",
+        "brand": null,
+        "size": "15",
+        "category": "Kopi & Teh",
+        "image": "8991001112903.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991001112903"
+    },
+    {
+        "barcode": "9556001299154",
+        "name": "Starbucks latte can",
+        "brand": "Starbucks",
+        "size": "220",
+        "category": "Kopi & Teh",
+        "image": "9556001299154.jpg",
+        "source": "https://world.openfoodfacts.org/product/9556001299154"
+    },
+    {
+        "barcode": "8998009040023",
+        "name": "Teh Kotak",
+        "brand": "ultrajaya",
+        "size": "300ml",
+        "category": "Kopi & Teh",
+        "image": "8998009040023.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998009040023"
+    },
+    {
+        "barcode": "8996001600146",
+        "name": "Teh Pucuk Melati",
+        "brand": "mayora",
+        "size": "350 ml",
+        "category": "Kopi & Teh",
+        "image": "8996001600146.jpg",
+        "source": "https://world.openfoodfacts.org/product/8996001600146"
+    },
+    {
+        "barcode": "8992936115069",
+        "name": "Tong Tji Teh Celup",
+        "brand": "Tong Tji",
+        "size": "25bags",
+        "category": "Kopi & Teh",
+        "image": "8992936115069.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992936115069"
+    },
+    {
+        "barcode": "8998666003072",
+        "name": "Torabika Gilus Mix Sweet Ginger",
+        "brand": "Torabika",
+        "size": "23g",
+        "category": "Kopi & Teh",
+        "image": "8998666003072.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998666003072"
+    },
+    {
+        "barcode": "8996001414224",
+        "name": "Torabika cappuccino 10x25g",
+        "brand": null,
+        "size": "2",
+        "category": "Kopi & Teh",
+        "image": "8996001414224.jpg",
+        "source": "https://world.openfoodfacts.org/product/8996001414224"
+    },
+    {
+        "barcode": "8998666001306",
+        "name": "Torabika creamy latte",
+        "brand": "torabika",
+        "size": "25gr",
+        "category": "Kopi & Teh",
+        "image": "8998666001306.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998666001306"
+    },
+    {
+        "barcode": "8999999195649",
+        "name": "Unilever Sari Wangi 100% Teh Asli",
+        "brand": "Unilever",
+        "size": "25 pockets",
+        "category": "Kopi & Teh",
+        "image": "8999999195649.jpg",
+        "source": "https://world.openfoodfacts.org/product/8999999195649"
+    },
+    {
+        "barcode": "0715844630008",
+        "name": "Abc sarden cabai 50 gr",
+        "brand": null,
+        "size": "1",
+        "category": "Makanan Kaleng & Instan",
+        "image": "0715844630008.jpg",
+        "source": "https://world.openfoodfacts.org/product/0715844630008"
+    },
+    {
+        "barcode": "8994907002149",
+        "name": "Abc sarden serundeng 400g",
+        "brand": null,
+        "size": "1",
+        "category": "Makanan Kaleng & Instan",
+        "image": "8994907002149.jpg",
+        "source": "https://world.openfoodfacts.org/product/8994907002149"
+    },
+    {
+        "barcode": "0711844330016",
+        "name": "Abc sarden tomat can 425g",
+        "brand": null,
+        "size": "1",
+        "category": "Makanan Kaleng & Instan",
+        "image": "0711844330016.jpg",
+        "source": "https://world.openfoodfacts.org/product/0711844330016"
+    },
+    {
+        "barcode": "8992987001014",
+        "name": "Maya sarden can 425",
+        "brand": null,
+        "size": "1",
+        "category": "Makanan Kaleng & Instan",
+        "image": "8992987001014.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992987001014"
+    },
+    {
+        "barcode": "8992804119816",
+        "name": "Pronas corned beef can 198",
+        "brand": null,
+        "size": "1",
+        "category": "Makanan Kaleng & Instan",
+        "image": "8992804119816.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992804119816"
+    },
+    {
+        "barcode": "8992804113401",
+        "name": "Pronas corned beef can 340",
+        "brand": "Pronas",
+        "size": "1",
+        "category": "Makanan Kaleng & Instan",
+        "image": "8992804113401.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992804113401"
+    },
+    {
+        "barcode": "8992804900834",
+        "name": "Pronas corned sac",
+        "brand": null,
+        "size": "1",
+        "category": "Makanan Kaleng & Instan",
+        "image": "8992804900834.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992804900834"
+    },
+    {
+        "barcode": "8992804900643",
+        "name": "Pronas kornet ku sapi can",
+        "brand": null,
+        "size": "1",
+        "category": "Makanan Kaleng & Instan",
+        "image": "8992804900643.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992804900643"
+    },
+    {
+        "barcode": "8998866623995",
+        "name": "Baked (Mi Instan Rasa Soto)",
+        "brand": "Mie Sedaap",
+        "size": "10",
+        "category": "Mie Instan",
+        "image": "8998866623995.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998866623995"
+    },
+    {
+        "barcode": "8993118731022",
+        "name": "Bihunku Goreng 60Gr",
+        "brand": null,
+        "size": "60 g",
+        "category": "Mie Instan",
+        "image": "8993118731022.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993118731022"
+    },
+    {
+        "barcode": "0089686599008",
+        "name": "Chitato Indomie Goreng 68gr",
+        "brand": "Chitato",
+        "size": "1",
+        "category": "Mie Instan",
+        "image": "0089686599008.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686599008"
+    },
+    {
+        "barcode": "0089686040128",
+        "name": "Indofood Indomie Takoyaki",
+        "brand": "Indofood",
+        "size": "91g",
+        "category": "Mie Instan",
+        "image": "0089686040128.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686040128"
+    },
+    {
+        "barcode": "0089686010046",
+        "name": "Indomie Ayam Spesial 68Gr",
+        "brand": "Indomie",
+        "size": "6",
+        "category": "Mie Instan",
+        "image": "0089686010046.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686010046"
+    },
+    {
+        "barcode": "0089686170924",
+        "name": "Indomie Goreng",
+        "brand": "Indomie",
+        "size": "5 x 85g",
+        "category": "Mie Instan",
+        "image": "0089686170924.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686170924"
+    },
+    {
+        "barcode": "0089686043433",
+        "name": "Indomie Goreng Ayam Geprek",
+        "brand": "Indomie",
+        "size": "85g",
+        "category": "Mie Instan",
+        "image": "0089686043433.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686043433"
+    },
+    {
+        "barcode": "0089686041767",
+        "name": "Indomie Goreng Jumbo Ayam Panggang",
+        "brand": "Indomie",
+        "size": "127 g",
+        "category": "Mie Instan",
+        "image": "0089686041767.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686041767"
+    },
+    {
+        "barcode": "0089686910704",
+        "name": "Indomie Goreng Rendang 5X91G",
+        "brand": "Indofood",
+        "size": "91g",
+        "category": "Mie Instan",
+        "image": "0089686910704.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686910704"
+    },
+    {
+        "barcode": "0089686010107",
+        "name": "Indomie Kuah Kaldu Ayam",
+        "brand": "Indomie",
+        "size": "75g",
+        "category": "Mie Instan",
+        "image": "0089686010107.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686010107"
+    },
+    {
+        "barcode": "0089686040647",
+        "name": "Indomie Mi kriting",
+        "brand": "Indomie",
+        "size": "90g",
+        "category": "Mie Instan",
+        "image": "0089686040647.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686040647"
+    },
+    {
+        "barcode": "0089686060126",
+        "name": "Indomie Pop Mie Baso",
+        "brand": "Indomie",
+        "size": "75g",
+        "category": "Mie Instan",
+        "image": "0089686060126.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686060126"
+    },
+    {
+        "barcode": "0089686010343",
+        "name": "Indomie Soto Mie",
+        "brand": "Indomie",
+        "size": "70 g",
+        "category": "Mie Instan",
+        "image": "0089686010343.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686010343"
+    },
+    {
+        "barcode": "0089686040098",
+        "name": "Indomie Tori Miso",
+        "brand": "Indomie",
+        "size": "86 gram",
+        "category": "Mie Instan",
+        "image": "0089686040098.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686040098"
+    },
+    {
+        "barcode": "0089686043648",
+        "name": "Indomie goreng ayam pop",
+        "brand": "Indomie",
+        "size": "85 g",
+        "category": "Mie Instan",
+        "image": "0089686043648.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686043648"
+    },
+    {
+        "barcode": "0089686043495",
+        "name": "Indomie seblak jaletot",
+        "brand": "Indomie",
+        "size": "1",
+        "category": "Mie Instan",
+        "image": "0089686043495.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686043495"
+    },
+    {
+        "barcode": "8997222130016",
+        "name": "Lemonilo Mi Goreng",
+        "brand": "Lemonilo",
+        "size": "80 g",
+        "category": "Mie Instan",
+        "image": "8997222130016.jpg",
+        "source": "https://world.openfoodfacts.org/product/8997222130016"
+    },
+    {
+        "barcode": "8996001526163",
+        "name": "Mayora Mie oven iga sapi",
+        "brand": "Mayora",
+        "size": "1",
+        "category": "Mie Instan",
+        "image": "8996001526163.jpg",
+        "source": "https://world.openfoodfacts.org/product/8996001526163"
+    },
+    {
+        "barcode": "8998866200820",
+        "name": "Mie Sedaap Cup",
+        "brand": "indopood",
+        "size": "77 g",
+        "category": "Mie Instan",
+        "image": "8998866200820.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998866200820"
+    },
+    {
+        "barcode": "8998866202343",
+        "name": "Mie Sedaap Goreng Selection Korean Spicy Chicken",
+        "brand": "mie sedaap",
+        "size": "87g",
+        "category": "Mie Instan",
+        "image": "8998866202343.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998866202343"
+    },
+    {
+        "barcode": "8886013300601",
+        "name": "Mie gemez enak 22g",
+        "brand": null,
+        "size": "10",
+        "category": "Mie Instan",
+        "image": "8886013300601.jpg",
+        "source": "https://world.openfoodfacts.org/product/8886013300601"
+    },
+    {
+        "barcode": "8992718853776",
+        "name": "Nissin Ramen Yakisoba rasa Takoyaki",
+        "brand": "Nissin",
+        "size": "2",
+        "category": "Mie Instan",
+        "image": "8992718853776.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992718853776"
+    },
+    {
+        "barcode": "0089686067002",
+        "name": "Pop Mie Kuah Pedes Dower rasa Ayam Pedas",
+        "brand": null,
+        "size": "75 g",
+        "category": "Mie Instan",
+        "image": "0089686067002.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686067002"
+    },
+    {
+        "barcode": "0089686060027",
+        "name": "Pop Mie Rasa Ayam",
+        "brand": null,
+        "size": "75 g",
+        "category": "Mie Instan",
+        "image": "0089686060027.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686060027"
+    },
+    {
+        "barcode": "0089686060362",
+        "name": "Pop Mie Soto Ayam",
+        "brand": "Pop Mie",
+        "size": "75g",
+        "category": "Mie Instan",
+        "image": "0089686060362.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686060362"
+    },
+    {
+        "barcode": "8801073114739",
+        "name": "Samyang Buldak jjajang",
+        "brand": "Samyang",
+        "size": "140g",
+        "category": "Mie Instan",
+        "image": "8801073114739.jpg",
+        "source": "https://world.openfoodfacts.org/product/8801073114739"
+    },
+    {
+        "barcode": "8801073114760",
+        "name": "Samyang spicy ramen",
+        "brand": "Samyang",
+        "size": "120g",
+        "category": "Mie Instan",
+        "image": "8801073114760.jpg",
+        "source": "https://world.openfoodfacts.org/product/8801073114760"
+    },
+    {
+        "barcode": "8801073114746",
+        "name": "Samyang stew hot",
+        "brand": "Samyang",
+        "size": "145g",
+        "category": "Mie Instan",
+        "image": "8801073114746.jpg",
+        "source": "https://world.openfoodfacts.org/product/8801073114746"
+    },
+    {
+        "barcode": "0089686049053",
+        "name": "Sarimi Puass Fried Chicken 100Gr",
+        "brand": null,
+        "size": "10",
+        "category": "Mie Instan",
+        "image": "0089686049053.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686049053"
+    },
+    {
+        "barcode": "0089686017748",
+        "name": "Sarimi isi 2 Goreng Ayam Kremes",
+        "brand": "Sarimi Isi 2",
+        "size": "125g",
+        "category": "Mie Instan",
+        "image": "0089686017748.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686017748"
+    },
+    {
+        "barcode": "8998866202619",
+        "name": "Sedaap Mie Korean Soup 77gr",
+        "brand": "Unknown",
+        "size": "6",
+        "category": "Mie Instan",
+        "image": "8998866202619.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998866202619"
+    },
+    {
+        "barcode": "8998866202930",
+        "name": "Sedap Sedaap cup ayam jerit",
+        "brand": "wings food",
+        "size": "75g",
+        "category": "Mie Instan",
+        "image": "8998866202930.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998866202930"
+    },
+    {
+        "barcode": "8998866203555",
+        "name": "Suksess Mi Goreng Rasa Rendang",
+        "brand": "Suksess",
+        "size": "132g",
+        "category": "Mie Instan",
+        "image": "8998866203555.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998866203555"
+    },
+    {
+        "barcode": "8998866203043",
+        "name": "Wingsfood Sedaap tasty beef yakiniku",
+        "brand": "Wingsfood",
+        "size": "115g",
+        "category": "Mie Instan",
+        "image": "8998866203043.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998866203043"
+    },
+    {
+        "barcode": "8998667301078",
+        "name": "Activ water lemon 380 ml",
+        "brand": null,
+        "size": "1",
+        "category": "Minuman",
+        "image": "8998667301078.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998667301078"
+    },
+    {
+        "barcode": "8998667301085",
+        "name": "Activ water orange 380 ml",
+        "brand": null,
+        "size": "1",
+        "category": "Minuman",
+        "image": "8998667301085.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998667301085"
+    },
+    {
+        "barcode": "8994588342114",
+        "name": "Air Mineral",
+        "brand": "cheers",
+        "size": "600ml",
+        "category": "Minuman",
+        "image": "8994588342114.jpg",
+        "source": "https://world.openfoodfacts.org/product/8994588342114"
+    },
+    {
+        "barcode": "8992761139018",
+        "name": "Air Mineral Ades Eco Green 600Ml",
+        "brand": null,
+        "size": "600ml",
+        "category": "Minuman",
+        "image": "8992761139018.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992761139018"
+    },
+    {
+        "barcode": "8993190912456",
+        "name": "Air Mineral Amidis",
+        "brand": "Amidis",
+        "size": "220 ml",
+        "category": "Minuman",
+        "image": "8993190912456.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993190912456"
+    },
+    {
+        "barcode": "8996129800060",
+        "name": "Air Mineral Festa",
+        "brand": null,
+        "size": "220 ml",
+        "category": "Minuman",
+        "image": "8996129800060.jpg",
+        "source": "https://world.openfoodfacts.org/product/8996129800060"
+    },
+    {
+        "barcode": "8999999504069",
+        "name": "Buavita Juice Guava 500ML",
+        "brand": null,
+        "size": "2",
+        "category": "Minuman",
+        "image": "8999999504069.jpg",
+        "source": "https://world.openfoodfacts.org/product/8999999504069"
+    },
+    {
+        "barcode": "8998009020193",
+        "name": "Buavita Juice Mango 245ml",
+        "brand": null,
+        "size": "1",
+        "category": "Minuman",
+        "image": "8998009020193.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998009020193"
+    },
+    {
+        "barcode": "0792649436547",
+        "name": "Chi sparkling water",
+        "brand": "Chi",
+        "size": "480ml",
+        "category": "Minuman",
+        "image": "0792649436547.jpg",
+        "source": "https://world.openfoodfacts.org/product/0792649436547"
+    },
+    {
+        "barcode": "8801007649238",
+        "name": "Cj Foods Corn Syrup 5Kg Cj 3",
+        "brand": "Cj Foods",
+        "size": null,
+        "category": "Minuman",
+        "image": "8801007649238.jpg",
+        "source": "https://world.openfoodfacts.org/product/8801007649238"
+    },
+    {
+        "barcode": "0896867700326",
+        "name": "Club Air Mineral",
+        "brand": "Club Air Mineral",
+        "size": "600",
+        "category": "Minuman",
+        "image": "0896867700326.jpg",
+        "source": "https://world.openfoodfacts.org/product/0896867700326"
+    },
+    {
+        "barcode": "8992761145019",
+        "name": "Coca-Cola Coca cola pet 250ml",
+        "brand": "Coca-Cola",
+        "size": "23",
+        "category": "Minuman",
+        "image": "8992761145019.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992761145019"
+    },
+    {
+        "barcode": "8992761111519",
+        "name": "Coca-Cola Rasa Original",
+        "brand": "Coca-Cola",
+        "size": null,
+        "category": "Minuman",
+        "image": "8992761111519.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992761111519"
+    },
+    {
+        "barcode": "8991001400024",
+        "name": "Cocoa Powder",
+        "brand": "van houten",
+        "size": "90 grams",
+        "category": "Minuman",
+        "image": "8991001400024.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991001400024"
+    },
+    {
+        "barcode": "8992858527308",
+        "name": "Coconut water",
+        "brand": null,
+        "size": "1",
+        "category": "Minuman",
+        "image": "8992858527308.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992858527308"
+    },
+    {
+        "barcode": "8992761145118",
+        "name": "Fanta Soda water drink",
+        "brand": "Fanta",
+        "size": "250 ml",
+        "category": "Minuman",
+        "image": "8992761145118.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992761145118"
+    },
+    {
+        "barcode": "8992761002046",
+        "name": "Fanta orange pet 390ml",
+        "brand": "Fanta",
+        "size": "17",
+        "category": "Minuman",
+        "image": "8992761002046.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992761002046"
+    },
+    {
+        "barcode": "8998866500708",
+        "name": "Floridina Orange 350ML",
+        "brand": "wings food",
+        "size": "350ml",
+        "category": "Minuman",
+        "image": "8998866500708.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998866500708"
+    },
+    {
+        "barcode": "8999510785212",
+        "name": "Grovy Root Beer",
+        "brand": null,
+        "size": "2",
+        "category": "Minuman",
+        "image": "8999510785212.jpg",
+        "source": "https://world.openfoodfacts.org/product/8999510785212"
+    },
+    {
+        "barcode": "8691216090446",
+        "name": "Haribo Happy Cola",
+        "brand": "Haribo",
+        "size": "80g",
+        "category": "Minuman",
+        "image": "8691216090446.jpg",
+        "source": "https://world.openfoodfacts.org/product/8691216090446"
+    },
+    {
+        "barcode": "8994096225138",
+        "name": "Idm Coconut Water",
+        "brand": null,
+        "size": "2",
+        "category": "Minuman",
+        "image": "8994096225138.jpg",
+        "source": "https://world.openfoodfacts.org/product/8994096225138"
+    },
+    {
+        "barcode": "8888900400111",
+        "name": "La Fonte",
+        "brand": "La Fonte",
+        "size": "450g",
+        "category": "Minuman",
+        "image": "8888900400111.jpg",
+        "source": "https://world.openfoodfacts.org/product/8888900400111"
+    },
+    {
+        "barcode": "8996001600269",
+        "name": "Le mineral",
+        "brand": "mayora nutrition",
+        "size": "1",
+        "category": "Minuman",
+        "image": "8996001600269.jpg",
+        "source": "https://world.openfoodfacts.org/product/8996001600269"
+    },
+    {
+        "barcode": "8850389108062",
+        "name": "Mogu mogu lychee",
+        "brand": "Mogu mogu",
+        "size": "1",
+        "category": "Minuman",
+        "image": "8850389108062.jpg",
+        "source": "https://world.openfoodfacts.org/product/8850389108062"
+    },
+    {
+        "barcode": "8996001600849",
+        "name": "Nipis Madu",
+        "brand": "mayora",
+        "size": null,
+        "category": "Minuman",
+        "image": "8996001600849.jpg",
+        "source": "https://world.openfoodfacts.org/product/8996001600849"
+    },
+    {
+        "barcode": "8997009510123",
+        "name": "Orange Water You.c1000",
+        "brand": "you.c1000",
+        "size": "500ml",
+        "category": "Minuman",
+        "image": "8997009510123.jpg",
+        "source": "https://world.openfoodfacts.org/product/8997009510123"
+    },
+    {
+        "barcode": "8997035563544",
+        "name": "Otsuka POCARI SWEAT 350ml",
+        "brand": "Otsuka",
+        "size": "350 ml",
+        "category": "Minuman",
+        "image": "8997035563544.jpg",
+        "source": "https://world.openfoodfacts.org/product/8997035563544"
+    },
+    {
+        "barcode": "8997035563414",
+        "name": "POCARI SWEAT 500 ml",
+        "brand": "otsuka",
+        "size": "500ml",
+        "category": "Minuman",
+        "image": "8997035563414.jpg",
+        "source": "https://world.openfoodfacts.org/product/8997035563414"
+    },
+    {
+        "barcode": "8997035600546",
+        "name": "Pocari Ion Supply Drink 900ml",
+        "brand": "Pocari",
+        "size": "900 ml",
+        "category": "Minuman",
+        "image": "8997035600546.jpg",
+        "source": "https://world.openfoodfacts.org/product/8997035600546"
+    },
+    {
+        "barcode": "8997035111110",
+        "name": "Pocari sweat can 330ml",
+        "brand": "Pocari Sweat",
+        "size": "1",
+        "category": "Minuman",
+        "image": "8997035111110.jpg",
+        "source": "https://world.openfoodfacts.org/product/8997035111110"
+    },
+    {
+        "barcode": "8992761136031",
+        "name": "Sprite 1.5L",
+        "brand": null,
+        "size": "2 10 .09.2022",
+        "category": "Minuman",
+        "image": "8992761136031.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992761136031"
+    },
+    {
+        "barcode": "8998866202923",
+        "name": "Wingsfood Floridina Coco 350ml",
+        "brand": "Wingsfood",
+        "size": "350ml",
+        "category": "Minuman",
+        "image": "8998866202923.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998866202923"
+    },
+    {
+        "barcode": "8998866500609",
+        "name": "Baby happy body fits pants XL 26",
+        "brand": null,
+        "size": null,
+        "category": "Perawatan Bayi",
+        "image": "8998866500609.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998866500609"
+    },
+    {
+        "barcode": "8990057782863",
+        "name": "Bebelac 3 madu",
+        "brand": null,
+        "size": null,
+        "category": "Perawatan Bayi",
+        "image": "8990057782863.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990057782863"
+    },
+    {
+        "barcode": "8990057723392",
+        "name": "Bebelac 3 madu 1 KG",
+        "brand": null,
+        "size": "1",
+        "category": "Perawatan Bayi",
+        "image": "8990057723392.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990057723392"
+    },
+    {
+        "barcode": "8990057182731",
+        "name": "Bebelac 3 madu 200g",
+        "brand": null,
+        "size": "1",
+        "category": "Perawatan Bayi",
+        "image": "8990057182731.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990057182731"
+    },
+    {
+        "barcode": "8990057782733",
+        "name": "Bebelac 3 madu 400g",
+        "brand": null,
+        "size": "1",
+        "category": "Perawatan Bayi",
+        "image": "8990057782733.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990057782733"
+    },
+    {
+        "barcode": "8990057723408",
+        "name": "Bebelac 3 vanila 1kg",
+        "brand": null,
+        "size": "1",
+        "category": "Perawatan Bayi",
+        "image": "8990057723408.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990057723408"
+    },
+    {
+        "barcode": "8990057782740",
+        "name": "Bebelac 3 vanila 400g",
+        "brand": null,
+        "size": "1",
+        "category": "Perawatan Bayi",
+        "image": "8990057782740.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990057782740"
+    },
+    {
+        "barcode": "8990057985844",
+        "name": "Bebelac 3 vanila 620 g",
+        "brand": null,
+        "size": "1",
+        "category": "Perawatan Bayi",
+        "image": "8990057985844.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990057985844"
+    },
+    {
+        "barcode": "8990057981150",
+        "name": "Bebelac 4 madu 1Kg",
+        "brand": null,
+        "size": "1",
+        "category": "Perawatan Bayi",
+        "image": "8990057981150.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990057981150"
+    },
+    {
+        "barcode": "8990057782764",
+        "name": "Bebelac 4 vanila 400g",
+        "brand": null,
+        "size": "1",
+        "category": "Perawatan Bayi",
+        "image": "8990057782764.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990057782764"
+    },
+    {
+        "barcode": "8990057705350",
+        "name": "Bebelac Gold 3 Vanila 700G",
+        "brand": null,
+        "size": "1",
+        "category": "Perawatan Bayi",
+        "image": "8990057705350.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990057705350"
+    },
+    {
+        "barcode": "8990057985172",
+        "name": "Bebelac soya 3 vanila 700g",
+        "brand": null,
+        "size": "1",
+        "category": "Perawatan Bayi",
+        "image": "8990057985172.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990057985172"
+    },
+    {
+        "barcode": "8998103001029",
+        "name": "Cussons baby mini",
+        "brand": null,
+        "size": null,
+        "category": "Perawatan Bayi",
+        "image": "8998103001029.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998103001029"
+    },
+    {
+        "barcode": "8888103208026",
+        "name": "Cussons baby pack bag",
+        "brand": null,
+        "size": "3",
+        "category": "Perawatan Bayi",
+        "image": "8888103208026.jpg",
+        "source": "https://world.openfoodfacts.org/product/8888103208026"
+    },
+    {
+        "barcode": "8990057782757",
+        "name": "Danone Bebelac 4 madu 400g",
+        "brand": "Danone",
+        "size": "1",
+        "category": "Perawatan Bayi",
+        "image": "8990057782757.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990057782757"
+    },
+    {
+        "barcode": "8999908045904",
+        "name": "My baby gift set",
+        "brand": null,
+        "size": null,
+        "category": "Perawatan Bayi",
+        "image": "8999908045904.jpg",
+        "source": "https://world.openfoodfacts.org/product/8999908045904"
+    },
+    {
+        "barcode": "4999929734102",
+        "name": "My baby k.colg 2in1 fresh",
+        "brand": null,
+        "size": null,
+        "category": "Perawatan Bayi",
+        "image": "4999929734102.jpg",
+        "source": "https://world.openfoodfacts.org/product/4999929734102"
+    },
+    {
+        "barcode": "8999908764201",
+        "name": "My baby k.colg 2in1 sweet",
+        "brand": null,
+        "size": null,
+        "category": "Perawatan Bayi",
+        "image": "8999908764201.jpg",
+        "source": "https://world.openfoodfacts.org/product/8999908764201"
+    },
+    {
+        "barcode": "8990057746100",
+        "name": "Nutribaby 1 400g",
+        "brand": null,
+        "size": "1",
+        "category": "Perawatan Bayi",
+        "image": "8990057746100.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990057746100"
+    },
+    {
+        "barcode": "8990057406202",
+        "name": "Nutribaby ryl 2box",
+        "brand": null,
+        "size": null,
+        "category": "Perawatan Bayi",
+        "image": "8990057406202.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990057406202"
+    },
+    {
+        "barcode": "0089686648003",
+        "name": "Promina BabyC keju cheddar",
+        "brand": null,
+        "size": null,
+        "category": "Perawatan Bayi",
+        "image": "0089686648003.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686648003"
+    },
+    {
+        "barcode": "0089686542233",
+        "name": "Promina Choclate Avocado",
+        "brand": null,
+        "size": "1",
+        "category": "Perawatan Bayi",
+        "image": "0089686542233.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686542233"
+    },
+    {
+        "barcode": "0089686700114",
+        "name": "Promina Daging Sayur",
+        "brand": null,
+        "size": "1",
+        "category": "Perawatan Bayi",
+        "image": "0089686700114.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686700114"
+    },
+    {
+        "barcode": "1287810725739",
+        "name": "Promina ayam tomat",
+        "brand": null,
+        "size": null,
+        "category": "Perawatan Bayi",
+        "image": "1287810725739.jpg",
+        "source": "https://world.openfoodfacts.org/product/1287810725739"
+    },
+    {
+        "barcode": "0189686648017",
+        "name": "Promina babyC Rumput laut",
+        "brand": null,
+        "size": null,
+        "category": "Perawatan Bayi",
+        "image": "0189686648017.jpg",
+        "source": "https://world.openfoodfacts.org/product/0189686648017"
+    },
+    {
+        "barcode": "0839878432138",
+        "name": "Promina choklat advokat",
+        "brand": null,
+        "size": null,
+        "category": "Perawatan Bayi",
+        "image": "0839878432138.jpg",
+        "source": "https://world.openfoodfacts.org/product/0839878432138"
+    },
+    {
+        "barcode": "0189686150008",
+        "name": "Promina pasta mac cheese",
+        "brand": null,
+        "size": null,
+        "category": "Perawatan Bayi",
+        "image": "0189686150008.jpg",
+        "source": "https://world.openfoodfacts.org/product/0189686150008"
+    },
+    {
+        "barcode": "0089686640014",
+        "name": "Promina puff blubery",
+        "brand": null,
+        "size": null,
+        "category": "Perawatan Bayi",
+        "image": "0089686640014.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686640014"
+    },
+    {
+        "barcode": "0089686640038",
+        "name": "Promina puff strawberry apple",
+        "brand": "Promina",
+        "size": "15Gr",
+        "category": "Perawatan Bayi",
+        "image": "0089686640038.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686640038"
+    },
+    {
+        "barcode": "4712098311505",
+        "name": "Sniper baby cotton",
+        "brand": null,
+        "size": "8",
+        "category": "Perawatan Bayi",
+        "image": "4712098311505.jpg",
+        "source": "https://world.openfoodfacts.org/product/4712098311505"
+    },
+    {
+        "barcode": "4902430869102",
+        "name": "Shampo head&shoulders supreme",
+        "brand": null,
+        "size": "350ml",
+        "category": "Sabun & Toiletries",
+        "image": "4902430869102.jpg",
+        "source": "https://world.openfoodfacts.org/product/4902430869102"
+    },
+    {
+        "barcode": "9556001975904",
+        "name": "Cerelac Beras merah",
+        "brand": null,
+        "size": null,
+        "category": "Sembako",
+        "image": "9556001975904.jpg",
+        "source": "https://world.openfoodfacts.org/product/9556001975904"
+    },
+    {
+        "barcode": "8998008153038",
+        "name": "Garam Gurih Botol 300G Miwon 40",
+        "brand": null,
+        "size": null,
+        "category": "Sembako",
+        "image": "8998008153038.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998008153038"
+    },
+    {
+        "barcode": "0088251218702",
+        "name": "Golden Ginger Sugar Free",
+        "brand": "Golden Ginger",
+        "size": "100",
+        "category": "Sembako",
+        "image": "0088251218702.jpg",
+        "source": "https://world.openfoodfacts.org/product/0088251218702"
+    },
+    {
+        "barcode": "8995177102058",
+        "name": "Gulaku Murni",
+        "brand": "Gulaku",
+        "size": "1kg",
+        "category": "Sembako",
+        "image": "8995177102058.jpg",
+        "source": "https://world.openfoodfacts.org/product/8995177102058"
+    },
+    {
+        "barcode": "8992993523791",
+        "name": "Haan Pancake Mix",
+        "brand": "Haan",
+        "size": "150g",
+        "category": "Sembako",
+        "image": "8992993523791.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992993523791"
+    },
+    {
+        "barcode": "4998219380333",
+        "name": "Ichitan cold brown sugar",
+        "brand": null,
+        "size": "1",
+        "category": "Sembako",
+        "image": "4998219380333.jpg",
+        "source": "https://world.openfoodfacts.org/product/4998219380333"
+    },
+    {
+        "barcode": "8992628020152",
+        "name": "Indofood Bimoli",
+        "brand": "Indofood",
+        "size": "2 liter",
+        "category": "Sembako",
+        "image": "8992628020152.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992628020152"
+    },
+    {
+        "barcode": "8993296301116",
+        "name": "Indofood Bogasari Kunci Biru",
+        "brand": "Indofood",
+        "size": "3",
+        "category": "Sembako",
+        "image": "8993296301116.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993296301116"
+    },
+    {
+        "barcode": "8885015220085",
+        "name": "Insto regular",
+        "brand": null,
+        "size": "15 mL",
+        "category": "Sembako",
+        "image": "8885015220085.jpg",
+        "source": "https://world.openfoodfacts.org/product/8885015220085"
+    },
+    {
+        "barcode": "0089686000061",
+        "name": "Mi Telur 3 ayam",
+        "brand": null,
+        "size": "2",
+        "category": "Sembako",
+        "image": "0089686000061.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686000061"
+    },
+    {
+        "barcode": "8991004037609",
+        "name": "Robco Palm Sugar 250G",
+        "brand": null,
+        "size": null,
+        "category": "Sembako",
+        "image": "8991004037609.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991004037609"
+    },
+    {
+        "barcode": "8992736925165",
+        "name": "Sasa tepung aym kntcy 200gr",
+        "brand": null,
+        "size": "1",
+        "category": "Sembako",
+        "image": "8992736925165.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992736925165"
+    },
+    {
+        "barcode": "0089686535044",
+        "name": "Sun beras merah",
+        "brand": null,
+        "size": null,
+        "category": "Sembako",
+        "image": "0089686535044.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686535044"
+    },
+    {
+        "barcode": "0896865350516",
+        "name": "Sun beras merah eko",
+        "brand": null,
+        "size": null,
+        "category": "Sembako",
+        "image": "0896865350516.jpg",
+        "source": "https://world.openfoodfacts.org/product/0896865350516"
+    },
+    {
+        "barcode": "8993093135006",
+        "name": "Tepung Ketan Putih Rose Brand",
+        "brand": null,
+        "size": "500 gr",
+        "category": "Sembako",
+        "image": "8993093135006.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993093135006"
+    },
+    {
+        "barcode": "8995083803162",
+        "name": "Tepung Roti Jf 250G",
+        "brand": null,
+        "size": null,
+        "category": "Sembako",
+        "image": "8995083803162.jpg",
+        "source": "https://world.openfoodfacts.org/product/8995083803162"
+    },
+    {
+        "barcode": "8995083803216",
+        "name": "Tepung Roti Mix Jf 250G",
+        "brand": null,
+        "size": null,
+        "category": "Sembako",
+        "image": "8995083803216.jpg",
+        "source": "https://world.openfoodfacts.org/product/8995083803216"
+    },
+    {
+        "barcode": "0711844162419",
+        "name": "Abc sari kacang hijau",
+        "brand": null,
+        "size": "1",
+        "category": "Snack",
+        "image": "0711844162419.jpg",
+        "source": "https://world.openfoodfacts.org/product/0711844162419"
+    },
+    {
+        "barcode": "8994016001446",
+        "name": "Alfamart selai coklat",
+        "brand": null,
+        "size": "1",
+        "category": "Snack",
+        "image": "8994016001446.jpg",
+        "source": "https://world.openfoodfacts.org/product/8994016001446"
+    },
+    {
+        "barcode": "8994016001439",
+        "name": "Alfamart selai kacang",
+        "brand": null,
+        "size": "1",
+        "category": "Snack",
+        "image": "8994016001439.jpg",
+        "source": "https://world.openfoodfacts.org/product/8994016001439"
+    },
+    {
+        "barcode": "0089686723021",
+        "name": "Chiki Twist Jagung Bakar",
+        "brand": null,
+        "size": "4",
+        "category": "Snack",
+        "image": "0089686723021.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686723021"
+    },
+    {
+        "barcode": "8997213750339",
+        "name": "Coy Cake Coklat",
+        "brand": "coy",
+        "size": "45g",
+        "category": "Snack",
+        "image": "8997213750339.jpg",
+        "source": "https://world.openfoodfacts.org/product/8997213750339"
+    },
+    {
+        "barcode": "8991102789318",
+        "name": "Crispy crackers rasa ayam goreng",
+        "brand": "Oops",
+        "size": "16 g",
+        "category": "Snack",
+        "image": "8991102789318.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991102789318"
+    },
+    {
+        "barcode": "8997026411380",
+        "name": "Dark Chocolate Cookies",
+        "brand": "melts",
+        "size": "120 g",
+        "category": "Snack",
+        "image": "8997026411380.jpg",
+        "source": "https://world.openfoodfacts.org/product/8997026411380"
+    },
+    {
+        "barcode": "8993083940023",
+        "name": "Denex biscuits Kukis Kelapa coconut cookies",
+        "brand": "Denex biscuits",
+        "size": "300g",
+        "category": "Snack",
+        "image": "8993083940023.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993083940023"
+    },
+    {
+        "barcode": "8992775002582",
+        "name": "Dilan chocolate",
+        "brand": null,
+        "size": "1",
+        "category": "Snack",
+        "image": "8992775002582.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992775002582"
+    },
+    {
+        "barcode": "8992753005482",
+        "name": "Frisian Flag Swiss Chocolate 946 ml",
+        "brand": "Frisian Flag",
+        "size": "946 ml",
+        "category": "Snack",
+        "image": "8992753005482.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992753005482"
+    },
+    {
+        "barcode": "8992775006016",
+        "name": "Garuda Skippy Peanut Butter Wafer Cones",
+        "brand": "Garuda",
+        "size": "15g",
+        "category": "Snack",
+        "image": "8992775006016.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992775006016"
+    },
+    {
+        "barcode": "8990800021898",
+        "name": "Happydent cool white 24g",
+        "brand": null,
+        "size": "10",
+        "category": "Snack",
+        "image": "8990800021898.jpg",
+        "source": "https://world.openfoodfacts.org/product/8990800021898"
+    },
+    {
+        "barcode": "0011747233033",
+        "name": "Kacang Dua Kelinci",
+        "brand": "Dua Kelincii",
+        "size": "180 g",
+        "category": "Snack",
+        "image": "0011747233033.jpg",
+        "source": "https://world.openfoodfacts.org/product/0011747233033"
+    },
+    {
+        "barcode": "8995899214244",
+        "name": "Kobe Boncabe Makaroni Krispi Level 10",
+        "brand": "Kobe",
+        "size": "150 g",
+        "category": "Snack",
+        "image": "8995899214244.jpg",
+        "source": "https://world.openfoodfacts.org/product/8995899214244"
+    },
+    {
+        "barcode": "8992696523081",
+        "name": "Milo Uht Coklat 115ML",
+        "brand": null,
+        "size": "2",
+        "category": "Snack",
+        "image": "8992696523081.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992696523081"
+    },
+    {
+        "barcode": "8993004786853",
+        "name": "Mister Potato Crisps Sapi Panggang",
+        "brand": "Mamee",
+        "size": "85 g",
+        "category": "Snack",
+        "image": "8993004786853.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993004786853"
+    },
+    {
+        "barcode": "8888166343405",
+        "name": "Monde Pie Bis",
+        "brand": "Monde",
+        "size": "40g",
+        "category": "Snack",
+        "image": "8888166343405.jpg",
+        "source": "https://world.openfoodfacts.org/product/8888166343405"
+    },
+    {
+        "barcode": "8995952008230",
+        "name": "Morin chocolate peanut Selai Coklat Kacang",
+        "brand": "Morin chocolate peanut",
+        "size": "150 mg",
+        "category": "Snack",
+        "image": "8995952008230.jpg",
+        "source": "https://world.openfoodfacts.org/product/8995952008230"
+    },
+    {
+        "barcode": "8993175539821",
+        "name": "Nabati White",
+        "brand": "Nabati",
+        "size": "132g",
+        "category": "Snack",
+        "image": "8993175539821.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993175539821"
+    },
+    {
+        "barcode": "8993175540797",
+        "name": "Nextar brownies",
+        "brand": "Nextar",
+        "size": "112 g (8 x 14 g)",
+        "category": "Snack",
+        "image": "8993175540797.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993175540797"
+    },
+    {
+        "barcode": "8888166336568",
+        "name": "Nissin Crispy Crackers",
+        "brand": "Nissin",
+        "size": "1",
+        "category": "Snack",
+        "image": "8888166336568.jpg",
+        "source": "https://world.openfoodfacts.org/product/8888166336568"
+    },
+    {
+        "barcode": "8994016009084",
+        "name": "Paroti Soes Chocolate 51Gr",
+        "brand": null,
+        "size": "3",
+        "category": "Snack",
+        "image": "8994016009084.jpg",
+        "source": "https://world.openfoodfacts.org/product/8994016009084"
+    },
+    {
+        "barcode": "8998866202053",
+        "name": "Potabee Pit Chips Ayam Bakar 75gr",
+        "brand": null,
+        "size": "1",
+        "category": "Snack",
+        "image": "8998866202053.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998866202053"
+    },
+    {
+        "barcode": "8886467100017",
+        "name": "Pringles Original 107gr",
+        "brand": "Pringles Salt & Seaweed",
+        "size": "107g",
+        "category": "Snack",
+        "image": "8886467100017.jpg",
+        "source": "https://world.openfoodfacts.org/product/8886467100017"
+    },
+    {
+        "barcode": "8886467100024",
+        "name": "Pringlesพริงเกิลส์ Pringles Sour Cream & Onion",
+        "brand": "Pringlesพริงเกิลส์",
+        "size": "107 g",
+        "category": "Snack",
+        "image": "8886467100024.jpg",
+        "source": "https://world.openfoodfacts.org/product/8886467100024"
+    },
+    {
+        "barcode": "8993175537346",
+        "name": "Richoco Nabati",
+        "brand": "Richoco",
+        "size": "132g",
+        "category": "Snack",
+        "image": "8993175537346.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993175537346"
+    },
+    {
+        "barcode": "8996001314005",
+        "name": "Roma Kelapa Cream Coklat",
+        "brand": "roma",
+        "size": "189g",
+        "category": "Snack",
+        "image": "8996001314005.jpg",
+        "source": "https://world.openfoodfacts.org/product/8996001314005"
+    },
+    {
+        "barcode": "8996001301142",
+        "name": "Roma bisc kelapa 300G",
+        "brand": "Roma",
+        "size": "300g",
+        "category": "Snack",
+        "image": "8996001301142.jpg",
+        "source": "https://world.openfoodfacts.org/product/8996001301142"
+    },
+    {
+        "barcode": "8991001770011",
+        "name": "Selamat Chocolate Sandwich Biscuit",
+        "brand": "Selamat",
+        "size": "102 g",
+        "category": "Snack",
+        "image": "8991001770011.jpg",
+        "source": "https://world.openfoodfacts.org/product/8991001770011"
+    },
+    {
+        "barcode": "8993172000355",
+        "name": "Simba Choco Chips",
+        "brand": "Simba",
+        "size": "330g + 33g",
+        "category": "Snack",
+        "image": "8993172000355.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993172000355"
+    },
+    {
+        "barcode": "8992942153505",
+        "name": "Snackit marsmallow",
+        "brand": null,
+        "size": "7 g",
+        "category": "Snack",
+        "image": "8992942153505.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992942153505"
+    },
+    {
+        "barcode": "8888166603431",
+        "name": "Superco (Malkist dengan Krim Rasa Cokelat)",
+        "brand": "Khong Guan",
+        "size": "22g",
+        "category": "Snack",
+        "image": "8888166603431.jpg",
+        "source": "https://world.openfoodfacts.org/product/8888166603431"
+    },
+    {
+        "barcode": "8997032680275",
+        "name": "Taro Net Seawed 62gr",
+        "brand": null,
+        "size": "1",
+        "category": "Snack",
+        "image": "8997032680275.jpg",
+        "source": "https://world.openfoodfacts.org/product/8997032680275"
+    },
+    {
+        "barcode": "8998009050053",
+        "name": "Ultra sari kacang hijau",
+        "brand": null,
+        "size": "1",
+        "category": "Snack",
+        "image": "8998009050053.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998009050053"
+    },
+    {
+        "barcode": "8992696404441",
+        "name": "Bear Brand milk susu steril",
+        "brand": "Nestlé",
+        "size": "189ml",
+        "category": "Susu & Olahan",
+        "image": "8992696404441.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992696404441"
+    },
+    {
+        "barcode": "8999898971221",
+        "name": "Bio Kul Greek",
+        "brand": "Bio Kul",
+        "size": "473g",
+        "category": "Susu & Olahan",
+        "image": "8999898971221.jpg",
+        "source": "https://world.openfoodfacts.org/product/8999898971221"
+    },
+    {
+        "barcode": "7622210398055",
+        "name": "Cadbury Dairy Milk Black Forest 62Gr",
+        "brand": "Cadbury",
+        "size": "1",
+        "category": "Susu & Olahan",
+        "image": "7622210398055.jpg",
+        "source": "https://world.openfoodfacts.org/product/7622210398055"
+    },
+    {
+        "barcode": "9556182023258",
+        "name": "Cadbury Dairy Milk Chocolate",
+        "brand": "Cadbury",
+        "size": "2",
+        "category": "Susu & Olahan",
+        "image": "9556182023258.jpg",
+        "source": "https://world.openfoodfacts.org/product/9556182023258"
+    },
+    {
+        "barcode": "7622210086693",
+        "name": "Cadbury Dairy Milk Fruit & Nut",
+        "brand": "Cadbury",
+        "size": "62 g",
+        "category": "Susu & Olahan",
+        "image": "7622210086693.jpg",
+        "source": "https://world.openfoodfacts.org/product/7622210086693"
+    },
+    {
+        "barcode": "8901233024233",
+        "name": "Cadbury Dairy Milk Oreo 60Gr",
+        "brand": "Cadbury",
+        "size": "4",
+        "category": "Susu & Olahan",
+        "image": "8901233024233.jpg",
+        "source": "https://world.openfoodfacts.org/product/8901233024233"
+    },
+    {
+        "barcode": "0089686598957",
+        "name": "Chitato Keju Supreme 68gr",
+        "brand": "Chitato",
+        "size": "1",
+        "category": "Susu & Olahan",
+        "image": "0089686598957.jpg",
+        "source": "https://world.openfoodfacts.org/product/0089686598957"
+    },
+    {
+        "barcode": "8992696405493",
+        "name": "Dancow Susu Bubuk Full Cream",
+        "brand": "Dancow",
+        "size": "780 gram",
+        "category": "Susu & Olahan",
+        "image": "8992696405493.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992696405493"
+    },
+    {
+        "barcode": "8999898962540",
+        "name": "Diamond Susu UHT Full Cream",
+        "brand": "Diamond",
+        "size": "200ml",
+        "category": "Susu & Olahan",
+        "image": "8999898962540.jpg",
+        "source": "https://world.openfoodfacts.org/product/8999898962540"
+    },
+    {
+        "barcode": "8996001440124",
+        "name": "Energen Susu",
+        "brand": "torabika",
+        "size": "32 g",
+        "category": "Susu & Olahan",
+        "image": "8996001440124.jpg",
+        "source": "https://world.openfoodfacts.org/product/8996001440124"
+    },
+    {
+        "barcode": "8992753033744",
+        "name": "Ff Full Cream",
+        "brand": "frisian flag",
+        "size": "4",
+        "category": "Susu & Olahan",
+        "image": "8992753033744.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992753033744"
+    },
+    {
+        "barcode": "9415007009801",
+        "name": "Fonterra Anlene ACTIFIT 3X Cokelat",
+        "brand": "Fonterra",
+        "size": "240g",
+        "category": "Susu & Olahan",
+        "image": "9415007009801.jpg",
+        "source": "https://world.openfoodfacts.org/product/9415007009801"
+    },
+    {
+        "barcode": "8992753031894",
+        "name": "Frisian Flag Bendera susu Kental Manis",
+        "brand": "Frisian Flag",
+        "size": "38g",
+        "category": "Susu & Olahan",
+        "image": "8992753031894.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992753031894"
+    },
+    {
+        "barcode": "8992753005499",
+        "name": "Frisian Flag Ff full cream 1 L",
+        "brand": "Frisian Flag",
+        "size": "946ml",
+        "category": "Susu & Olahan",
+        "image": "8992753005499.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992753005499"
+    },
+    {
+        "barcode": "8992753101207",
+        "name": "Frisian Flag Kental Manis",
+        "brand": "Frisian Flag",
+        "size": "370 g",
+        "category": "Susu & Olahan",
+        "image": "8992753101207.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992753101207"
+    },
+    {
+        "barcode": "8992753004010",
+        "name": "Frisian Flag Kental Manis Bendera",
+        "brand": "Frisian Flag",
+        "size": "560 g",
+        "category": "Susu & Olahan",
+        "image": "8992753004010.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992753004010"
+    },
+    {
+        "barcode": "8993351121307",
+        "name": "GreenFields Full Cream Milk",
+        "brand": "Greenfields",
+        "size": "2",
+        "category": "Susu & Olahan",
+        "image": "8993351121307.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993351121307"
+    },
+    {
+        "barcode": "8993007000086",
+        "name": "Indofood Nutrition Indomilk UHT Coklat",
+        "brand": "Indofood Nutrition",
+        "size": "1L",
+        "category": "Susu & Olahan",
+        "image": "8993007000086.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993007000086"
+    },
+    {
+        "barcode": "8993007000680",
+        "name": "Indomilk Uht Full Cream 1LT",
+        "brand": "Indofood Nutrition",
+        "size": "1L",
+        "category": "Susu & Olahan",
+        "image": "8993007000680.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993007000680"
+    },
+    {
+        "barcode": "8998009080500",
+        "name": "Kraft Cheddar 160g",
+        "brand": "Kraft",
+        "size": "165g",
+        "category": "Susu & Olahan",
+        "image": "8998009080500.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998009080500"
+    },
+    {
+        "barcode": "7622210580078",
+        "name": "Kraft Milky Soft 165gr",
+        "brand": "Kraft",
+        "size": "1",
+        "category": "Susu & Olahan",
+        "image": "7622210580078.jpg",
+        "source": "https://world.openfoodfacts.org/product/7622210580078"
+    },
+    {
+        "barcode": "7622300270919",
+        "name": "Kraft Quick Melt 165gr",
+        "brand": "Kraft",
+        "size": "165g",
+        "category": "Susu & Olahan",
+        "image": "7622300270919.jpg",
+        "source": "https://world.openfoodfacts.org/product/7622300270919"
+    },
+    {
+        "barcode": "8998866202732",
+        "name": "Milku Stroberi 200Ml",
+        "brand": "wings food",
+        "size": "200ml",
+        "category": "Susu & Olahan",
+        "image": "8998866202732.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998866202732"
+    },
+    {
+        "barcode": "8993175547635",
+        "name": "Nabati Richeese Black",
+        "brand": "Nabati",
+        "size": "132g",
+        "category": "Susu & Olahan",
+        "image": "8993175547635.jpg",
+        "source": "https://world.openfoodfacts.org/product/8993175547635"
+    },
+    {
+        "barcode": "8992761164539",
+        "name": "Nutriboost Rasa Jeruk",
+        "brand": "nutriboost",
+        "size": "300ml",
+        "category": "Susu & Olahan",
+        "image": "8992761164539.jpg",
+        "source": "https://world.openfoodfacts.org/product/8992761164539"
+    },
+    {
+        "barcode": "8996001431030",
+        "name": "Torabika Eka Semesta Drink beng-beng",
+        "brand": "Torabika Eka Semesta",
+        "size": "29g",
+        "category": "Susu & Olahan",
+        "image": "8996001431030.jpg",
+        "source": "https://world.openfoodfacts.org/product/8996001431030"
+    },
+    {
+        "barcode": "8998009010606",
+        "name": "Ultra Milk Mini Straw",
+        "brand": null,
+        "size": "125 ml",
+        "category": "Susu & Olahan",
+        "image": "8998009010606.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998009010606"
+    },
+    {
+        "barcode": "8998009011696",
+        "name": "Ultra Mimi Kids Full Cream",
+        "brand": null,
+        "size": "9",
+        "category": "Susu & Olahan",
+        "image": "8998009011696.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998009011696"
+    },
+    {
+        "barcode": "8998009010231",
+        "name": "Ultra jaya UHT Rasa Cokelat",
+        "brand": "Ultra jaya",
+        "size": "250ml",
+        "category": "Susu & Olahan",
+        "image": "8998009010231.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998009010231"
+    },
+    {
+        "barcode": "8998009010552",
+        "name": "Ultrajaya Ultra Milk Full Cream",
+        "brand": "Ultrajaya",
+        "size": "200mL",
+        "category": "Susu & Olahan",
+        "image": "8998009010552.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998009010552"
+    },
+    {
+        "barcode": "8998009010590",
+        "name": "Ultrajaya Ultra Milk Mini Choco",
+        "brand": "Ultrajaya",
+        "size": "3",
+        "category": "Susu & Olahan",
+        "image": "8998009010590.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998009010590"
+    },
+    {
+        "barcode": "8998009010620",
+        "name": "Ultrajaya Ultra Milk Uht Coklat",
+        "brand": "Ultrajaya",
+        "size": "1L",
+        "category": "Susu & Olahan",
+        "image": "8998009010620.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998009010620"
+    },
+    {
+        "barcode": "8998009010569",
+        "name": "Ultrajaya Ultramilk Susu UHT Coklat",
+        "brand": "Ultrajaya",
+        "size": "200ml",
+        "category": "Susu & Olahan",
+        "image": "8998009010569.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998009010569"
+    },
+    {
+        "barcode": "8998009010576",
+        "name": "Ultramilk Susu UHT Stroberi",
+        "brand": "Ultramilk",
+        "size": "5",
+        "category": "Susu & Olahan",
+        "image": "8998009010576.jpg",
+        "source": "https://world.openfoodfacts.org/product/8998009010576"
+    }
+]

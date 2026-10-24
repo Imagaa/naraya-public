@@ -1,0 +1,16 @@
+# Reward photos (seed data)
+
+Each demo reward has its own photo, re-encoded to 800px wide (EXIF stripped).
+
+| File | Reward | Source | Author | Licence |
+|---|---|---|---|---|
+| 1.jpg | (see RewardSeeder) | earlier Naraya seed photo (storage/app/seed-source-images/rewards) | — | — |
+| 2.jpg | (see RewardSeeder) | earlier Naraya seed photo (storage/app/seed-source-images/rewards) | — | — |
+| 4.jpg | (see RewardSeeder) | earlier Naraya seed photo (storage/app/seed-source-images/rewards) | — | — |
+| 6.jpg | (see RewardSeeder) | earlier Naraya seed photo (storage/app/seed-source-images/rewards) | — | — |
+| 7.jpg | (see RewardSeeder) | earlier Naraya seed photo (storage/app/seed-source-images/rewards) | — | — |
+| 3.jpg | (see RewardSeeder) | https://commons.wikimedia.org/wiki/File:Baseball_cap.jpg | TexasRebel | Public domain |
+| 5.jpg | (see RewardSeeder) | https://commons.wikimedia.org/wiki/File:Desk_calendar_2022_July_11_-_03-53PM.jpeg | Nesnad | CC BY 4.0 |
+| 8.jpg | (see RewardSeeder) | https://commons.wikimedia.org/wiki/File:Citizen_SLD-100NR_calculator.jpg | LoMit | CC BY-SA 4.0 |
+| 9.jpg | (see RewardSeeder) | https://commons.wikimedia.org/wiki/File:Electric_Fan_240x355.jpg | Rfc1394(talk) | Public domain |
+| 10.jpg | (see RewardSeeder) | https://commons.wikimedia.org/wiki/File:Digital_kitchen_scale_KE_901-0329.jpg | Raimond Spekking | CC BY-SA 4.0 |

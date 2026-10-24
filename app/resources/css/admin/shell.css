@@ -1,0 +1,69 @@
+/* Admin shell: dark job-grouped sidebar, white topbar, content on --canvas. */
+.adm-body { margin: 0; background: var(--canvas); color: var(--ink); font-family: var(--f-body); }
+.adm-shell { display: grid; grid-template-columns: 232px minmax(0, 1fr); min-height: 100vh; }
+
+.adm-side { position: sticky; top: 0; height: 100vh; overflow-y: auto; display: flex; flex-direction: column; gap: 18px; padding: 18px 12px; background: var(--night); color: var(--night-text); }
+.adm-brand { padding: 0 10px; font: 800 18px/1.2 var(--f-display); color: #fff; text-decoration: none; }
+.adm-brand small { display: block; font: 600 11px/1.4 var(--f-body); letter-spacing: .1em; text-transform: uppercase; color: var(--brand); }
+.adm-nav { display: flex; flex: 1; flex-direction: column; gap: 14px; }
+.adm-nav-group { display: flex; flex-direction: column; gap: 2px; }
+.adm-nav-group-label { padding: 0 10px 4px; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #7D838C; }
+.adm-nav-link { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: var(--r-sm); color: var(--night-text); font-size: 14px; text-decoration: none; }
+.adm-nav-link:hover { background: var(--night-2); color: #fff; }
+.adm-nav-link[aria-current="page"] { background: var(--brand); color: var(--ink); font-weight: 600; }
+.adm-nav-link svg { flex: none; }
+.adm-nav-badge { margin-left: auto; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 99px; background: var(--sale); color: #fff; font-size: 11px; font-weight: 700; line-height: 20px; text-align: center; font-variant-numeric: tabular-nums; }
+.adm-nav-foot { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--night-2); }
+
+.adm-main { display: flex; min-width: 0; flex-direction: column; }
+.adm-top { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: 12px; height: 60px; padding: 0 var(--gutter); background: var(--surface); border-bottom: 1px solid var(--line); }
+.adm-search-trigger { display: flex; flex: 1; max-width: 520px; align-items: center; gap: 8px; height: 40px; padding: 0 12px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--canvas); color: var(--muted); font: inherit; text-align: left; cursor: pointer; }
+.adm-search-trigger kbd { margin-left: auto; padding: 1px 6px; border: 1px solid var(--line-2); border-radius: 5px; font: 500 11px var(--f-body); }
+.adm-top-spacer { flex: 1; }
+.adm-icon-btn { position: relative; display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface); color: var(--ink); cursor: pointer; }
+.adm-icon-btn:hover { background: var(--canvas); }
+.adm-avatar { width: 36px; height: 36px; border: 0; border-radius: 50%; background: var(--brand); color: var(--ink); font: 800 13px var(--f-display); cursor: pointer; }
+.adm-user-menu { position: fixed; inset: 64px var(--gutter) auto auto; min-width: 200px; margin: 0; padding: 8px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); box-shadow: var(--sh-2); }
+.adm-user-menu p { margin: 4px 8px 8px; font-weight: 600; }
+.adm-user-menu button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 8px; border: 0; border-radius: var(--r-sm); background: none; color: var(--sale); font: inherit; cursor: pointer; }
+.adm-user-menu button:hover { background: var(--sale-soft); }
+
+.adm-content { padding: 24px var(--gutter) 48px; }
+.adm-menu-btn, .adm-search-icon, .adm-backdrop { display: none; }
+
+@media (max-width: 899px) {
+  .adm-shell { grid-template-columns: minmax(0, 1fr); }
+  .adm-side { position: fixed; inset: 0 auto 0 0; z-index: 40; width: 264px; transform: translateX(-100%); transition: transform .2s ease; }
+  .adm-side.is-open { transform: none; }
+  .adm-backdrop.is-open { display: block; position: fixed; inset: 0; z-index: 30; background: rgb(22 24 29 / .5); }
+  .adm-menu-btn, .adm-search-icon { display: grid; }
+  .adm-search-trigger { display: none; }
+  .adm-content { padding-top: 16px; }
+}
+.adm-line-narrow { display: none !important; }
+@media (max-width: 899px) {
+  .adm-top { gap: 8px; }
+  .adm-line-wide { display: none !important; }
+  .adm-line-narrow { display: inline-flex !important; flex: none; }
+  .adm-line-narrow .line-soon { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .adm-side { transition: none; } }
+
+/* Same thin scrollbars as the marketplace and sales portals (marketplace/base.css), never the browser default. */
+html, * { scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 99px; border: 2px solid transparent; background-clip: padding-box; }
+::-webkit-scrollbar-thumb:hover { background-color: var(--ink-2); }
+.adm-side { scrollbar-color: rgba(255, 255, 255, .18) transparent; }
+.adm-side::-webkit-scrollbar-thumb { background-color: rgba(255, 255, 255, .18); }
+
+/* Lucide icons tagged class="ico" (shared Blade markup): sized like the marketplace's, compact inside admin buttons. */
+.ico { width: 20px; height: 20px; flex: none; }
+.btn .ico { width: 16px; height: 16px; }
+.btn.btn-sm { height: 32px; padding: 0 12px; font-size: 13px; }
+
+/* brand-kit lockup in the sidebar */
+.adm-brand-logo { height: 30px; margin-bottom: 6px; }
+.adm-search-label { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.adm-search-trigger kbd { flex: none; }

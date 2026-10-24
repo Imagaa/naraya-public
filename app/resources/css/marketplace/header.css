@@ -1,0 +1,112 @@
+.hdr { background: var(--surface); border-bottom: 1px solid var(--line); }
+.util { display: none; }
+.hdr-main { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; max-width: 1280px; margin-inline: auto; padding: 12px var(--gutter); }
+
+.logo { display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-display); font-weight: 800; font-size: 20px; letter-spacing: -0.03em; }
+.logo-mark { width: 32px; height: 32px; border-radius: 9px; background: var(--brand); color: var(--ink); display: grid; place-items: center; font-size: 18px; }
+.logo small { font-family: var(--f-body); font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px; }
+
+.search { display: flex; align-items: center; gap: 10px; height: 42px; margin: 0; padding: 0 14px; background: var(--canvas); border: 1px solid var(--line); border-radius: 10px; color: var(--muted); }
+.search:focus-within { border-color: var(--ink-2); }
+.search input { flex: 1; min-width: 0; border: 0; background: none; font: inherit; color: var(--ink); outline: none; }
+
+.actions { display: flex; align-items: center; gap: 4px; justify-self: end; }
+.act { position: relative; display: flex; align-items: center; gap: 8px; padding: 8px; border-radius: 10px; }
+.act:hover { background: var(--canvas); }
+.act-label { display: none; font-weight: 500; line-height: 1.2; }
+.act-label small { display: block; font-size: 11px; font-weight: 400; color: var(--muted); }
+.cart-badge { position: absolute; top: 2px; left: 20px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 99px; background: var(--brand); color: var(--ink); font-size: 11px; font-weight: 700; display: grid; place-items: center; border: 2px solid var(--surface); }
+
+.catnav-wrap { display: none; }
+
+.tabbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: grid; grid-template-columns: repeat(4, 1fr); background: var(--surface); border-top: 1px solid var(--line); padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px)); }
+.tabbar a { display: grid; justify-items: center; gap: 2px; padding: 4px; font-size: 11px; font-weight: 500; color: var(--muted); }
+.tabbar a[aria-current="page"] { color: var(--ink); font-weight: 600; }
+.tabbar a[aria-current="page"] .ico { color: var(--brand); }
+
+.foot { background: var(--night); color: var(--night-text); }
+.foot-inner { display: grid; gap: 24px; max-width: 1280px; margin-inline: auto; padding: 28px var(--gutter) 16px; }
+.foot .logo { color: #fff; }
+.foot-about { margin-top: 10px; font-size: 13px; max-width: 34ch; }
+.foot h4 { margin: 0 0 8px; color: #fff; font-size: 13px; }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13px; }
+.foot a:hover { color: #fff; }
+.pay { display: flex; flex-wrap: wrap; gap: 6px; }
+.pay span { font-size: 12px; font-weight: 600; color: #fff; border: 1px solid rgba(255, 255, 255, .18); border-radius: 6px; padding: 3px 8px; }
+.foot-copy { max-width: 1280px; margin-inline: auto; padding: 0 var(--gutter) 24px; font-size: 12px; }
+.foot-copy a { text-decoration: underline; color: #fff; }
+
+@media (min-width: 640px) {
+  .hdr-main { grid-template-columns: auto minmax(0, 1fr) auto; gap: 20px; }
+  .tabbar { display: none; }
+  .foot-inner { grid-template-columns: 1.4fr 1fr 1fr 1fr; padding-top: 36px; }
+}
+
+@media (min-width: 1024px) {
+  .util { display: block; background: var(--night); color: var(--night-text); font-size: 12.5px; }
+  .util-inner { display: flex; justify-content: space-between; gap: 16px; max-width: 1280px; margin-inline: auto; padding: 7px var(--gutter); }
+  .util-inner > span { display: inline-flex; align-items: center; gap: 6px; }
+  .util b { color: #fff; font-weight: 600; }
+  .util .ico { width: 14px; height: 14px; color: var(--brand); }
+  .hdr-main { gap: 28px; }
+  .act-label { display: block; }
+  .catnav-wrap { display: block; max-width: 1280px; margin-inline: auto; padding: 0 var(--gutter) 12px; }
+  .catnav { display: flex; gap: 6px; }
+  /* The wrap is full width with the gutter as padding: keep the arrows inside it (and centred on the chips, not the bottom padding). */
+  .catnav-wrap .hscroll-btn { top: calc(50% - 6px); }
+  .catnav-wrap .hscroll-btn.hscroll-prev { left: calc(var(--gutter) - 4px); }
+  .catnav-wrap .hscroll-btn.hscroll-next { right: calc(var(--gutter) - 4px); }
+  .catnav a { border: 1px solid var(--line); border-radius: 99px; padding: 6px 14px; font-size: 13px; font-weight: 500; white-space: nowrap; }
+  .catnav a:hover { border-color: var(--line-2); }
+  .catnav .catnav-all { display: inline-flex; align-items: center; gap: 6px; background: var(--ink); border-color: var(--ink); color: #fff; }
+  .catnav .catnav-all .ico { width: 16px; height: 16px; }
+  .foot { margin-top: 56px; }
+  .foot-inner { padding-top: 44px; }
+}
+
+/* phone task bar for flow pages (cart, order detail, complaint): back,
+   title, cart. It replaces logo + search below 640px. */
+.taskbar { display: flex; align-items: center; gap: 6px; padding: 8px; background: var(--surface); border-bottom: 1px solid var(--line); }
+.taskbar h1 { flex: 1; min-width: 0; font-size: 17px; line-height: 1.2; }
+.taskbar small { display: block; font: 500 12px var(--f-body); color: var(--muted); letter-spacing: 0; }
+.icon-btn { position: relative; width: 40px; height: 40px; flex: none; border: 0; border-radius: 10px; background: none; display: grid; place-items: center; color: var(--ink); }
+.icon-btn:hover { background: var(--canvas); }
+.icon-btn .ico-sm { width: 16px; height: 16px; }
+.hdr.has-task { display: none; }
+@media (min-width: 640px) {
+  .taskbar { display: none; }
+  .hdr.has-task { display: block; }
+}
+/* "Daftar" sits next to "Masuk" from tablet up; on phones the login page links to it. */
+.hdr-register { display: none; }
+@media (min-width: 640px) { .hdr-register { display: inline-flex; } }
+/* Phones: the "Grosir" tag gives way so logo + four header icons fit one row at 360–390px. */
+@media (max-width: 639px) { .logo small { display: none; } }
+
+/* Storefront tabs (Naraya Grosir | Naraya Toys): a strip under the logo/search row; equal halves on phones */
+.store-tabs { border-top: 1px solid var(--line); }
+.store-tabs-in { display: flex; max-width: 1280px; margin-inline: auto; padding: 0 var(--gutter); }
+.store-tabs button { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 44px; padding: 0 16px; border: 0; border-bottom: 2px solid transparent; background: none; color: var(--muted); font: 600 14px var(--f-body); cursor: pointer; }
+.store-tabs button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--brand); }
+.store-tabs button:hover { color: var(--ink); }
+@media (min-width: 640px) { .store-tabs button { flex: none; } }
+@media (min-width: 1024px) { .store-tabs { border-top: 0; } .store-tabs-in { gap: 8px; padding-bottom: 4px; } }
+
+/* Online buying on hold: a slim band under the header, same words as the old closed page */
+.mp-hold { background: var(--brand-soft); border-bottom: 1px solid #F3E2A6; }
+.mp-hold p { display: flex; gap: 8px; align-items: flex-start; margin: 0 auto; padding-block: 9px; font-size: 13px; line-height: 1.45; color: var(--ink); }
+.mp-hold .ico { flex: none; width: 16px; height: 16px; margin-top: 2px; }
+
+/* brand-kit logos in the marketplace */
+.hdr-main .logo-img { height: 32px; }
+.store-tabs button { gap: 0; padding: 0 10px; }
+.store-tab-logo { height: 24px; opacity: .45; transition: opacity .15s; }
+.store-tabs button:hover .store-tab-logo { opacity: .8; }
+.store-tabs button[aria-pressed="true"] .store-tab-logo { opacity: 1; }
+@media (min-width: 400px) { .store-tab-logo { height: 26px; } }
+@media (min-width: 640px) { .store-tabs button { padding: 0 18px; } .store-tab-logo { height: 28px; } }
+/* a closed storefront (grosir while it is being built): dimmed logo with a caption under it, not clickable */
+.store-tabs button.is-soon { flex-direction: column; gap: 2px; cursor: default; }
+.store-tabs button.is-soon .store-tab-logo { height: 20px; opacity: .3; }
+.store-tab-soon { font: 600 10px/1 var(--f-body); color: var(--muted); }
+.foot .logo-img { height: 34px; }

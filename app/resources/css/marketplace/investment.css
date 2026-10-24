@@ -1,0 +1,112 @@
+/* Investasi Naraya: the marketplace card and the store's Investasi page.
+   Always green, whatever the business line; .inv-scope carries the
+   green to the sales Investasi Toko sheet and the admin Investasi page. */
+:root { --inv: #16A34A; --inv-hover: #15803D; --inv-card: #D9F2E2; --inv-result: #F2FBF5; --inv-line: #9ED9B3; }
+.inv-cta, .inv-card .btn-primary, .inv-scope .btn-primary { background: var(--inv); border-color: var(--inv); color: #fff; }
+.inv-cta:hover, .inv-card .btn-primary:hover, .inv-scope .btn-primary:hover { background: var(--inv-hover); border-color: var(--inv-hover); color: #fff; }
+.inv-wrap { margin-top: 16px; }
+.inv-card { display: flex; flex-direction: column; gap: 16px; padding: 20px; border-radius: var(--r-lg); background: var(--inv-card); border: 1px solid var(--inv); color: var(--ink); text-decoration: none; }
+.inv-col { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.inv-card h2 { margin: 0; font: 800 22px/1.2 var(--f-display); color: var(--ink); }
+.inv-lead { margin: 0; color: #4B5260; font-size: 13.5px; line-height: 1.5; }
+.inv-presets { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 4px; }
+.inv-presets button { height: 44px; border-radius: var(--r-md); border: 1px solid var(--inv-line); background: var(--surface); color: var(--ink); font: 700 15px var(--f-body); cursor: pointer; }
+.inv-presets button[aria-pressed="true"] { background: var(--inv); border-color: var(--inv); color: #fff; }
+.inv-slider { display: flex; align-items: center; gap: 12px; }
+.inv-slider input { flex: 1; min-width: 0; height: 44px; accent-color: var(--inv); }
+.inv-slider b { flex: none; font-size: 14px; }
+.inv-result { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 12px; margin: 0; padding: 16px; border-radius: var(--r-md); background: var(--inv-result); border: 1px solid var(--inv-line); }
+.inv-result div { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.inv-result dt { font-size: 12px; color: var(--muted); }
+.inv-result dd { margin: 0; font-weight: 700; font-size: 17px; overflow-wrap: anywhere; }
+.inv-hl { color: var(--ok); }
+.inv-note { margin: 0; font-size: 12px; color: #4B5260; }
+.inv-cta { width: 100%; justify-content: center; }
+@media (min-width: 900px) {
+  .inv-calc-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; padding: 28px 32px; }
+  .inv-calc-card .inv-col + .inv-col { justify-content: center; }
+  .inv-card h2 { font-size: 26px; }
+}
+
+/* the card once the store has bought: this month's income */
+.inv-active { gap: 10px; }
+.inv-head { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #4B5260; }
+.inv-head .ico { color: var(--ink); }
+.inv-big { font: 800 32px/1 var(--f-display); }
+.inv-active .inv-big { color: var(--ok); }
+.inv-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; font-size: 12px; }
+.inv-chips span { padding: 4px 10px; border-radius: 99px; background: var(--canvas); border: 1px solid var(--line); }
+
+/* the store's Investasi page */
+.inv-page { display: flex; flex-direction: column; gap: 16px; max-width: 720px; }
+.inv-wallet { display: flex; flex-direction: column; gap: 12px; padding: 20px; border-radius: var(--r-lg); background: var(--night); color: #fff; }
+.inv-pending { align-self: flex-start; padding: 5px 10px; border-radius: 99px; background: #2B3039; color: var(--brand); font-size: 12px; }
+.inv-withdraw { display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: var(--r-md); background: #22262E; font-size: 13px; }
+.inv-withdraw .input { background: #fff; color: var(--ink); }
+.inv-bank { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.inv-bank span { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.inv-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.inv-small { margin: 0; font-size: 12.5px; color: var(--muted); line-height: 1.45; }
+.inv-wallet .inv-small { color: var(--night-text); }
+.inv-err { margin: 0; color: var(--sale); font-size: 13px; }
+.inv-wallet .inv-err { color: #FF8A9B; }
+.inv-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.inv-stats div { display: flex; flex-direction: column; gap: 4px; padding: 12px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); min-width: 0; }
+.inv-stats span, .inv-stats small { font-size: 11.5px; color: var(--muted); }
+.inv-stats b { font-size: 15px; }
+.inv-sec, .inv-buy { display: flex; flex-direction: column; gap: 10px; }
+.inv-sec h2, .inv-buy h2 { margin: 0; font: 800 17px var(--f-display); }
+.inv-buy { padding: 16px; border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); }
+.inv-pkg { display: flex; flex-direction: column; gap: 8px; padding: 14px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); }
+.inv-pkg small { color: var(--muted); font-size: 12.5px; line-height: 1.45; }
+.inv-pkg progress { width: 100%; height: 8px; accent-color: var(--brand); }
+.inv-pkg-head, .inv-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.inv-st { flex: none; padding: 4px 10px; border-radius: 99px; font-size: 12px; font-weight: 700; background: var(--canvas); }
+.inv-st-ok { background: var(--ok-soft); color: var(--ok); }
+.inv-st-wait { background: var(--brand-soft); color: #7A5B05; }
+.inv-st-bad { background: var(--sale-soft); color: var(--sale); }
+.inv-sum { display: flex; flex-direction: column; gap: 6px; margin: 0; padding: 12px; border-radius: var(--r-md); background: var(--canvas); font-size: 13.5px; }
+.inv-sum div { display: flex; justify-content: space-between; gap: 8px; }
+.inv-sum dd { margin: 0; font-weight: 700; }
+.inv-methods { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; border: 0; }
+.inv-methods legend { margin-bottom: 6px; font-size: 13px; font-weight: 600; }
+.inv-file { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; }
+.inv-terms { padding: 12px 14px; border-radius: var(--r-md); background: var(--brand-soft); font-size: 13.5px; line-height: 1.5; }
+.inv-terms summary { font-weight: 700; cursor: pointer; }
+.inv-terms ol { margin: 8px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+.inv-entry { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); }
+.inv-entry span { display: flex; flex-direction: column; gap: 2px; min-width: 0; font-size: 14px; }
+.inv-entry small { color: var(--muted); font-size: 12px; }
+.inv-plus { color: var(--ok); }
+.inv-stats b { font-size: 14px; overflow-wrap: anywhere; }
+.inv-intro-note { margin: 0; padding: 14px 16px; border-radius: var(--r-md); background: var(--brand-soft); font-size: 14px; line-height: 1.5; }
+
+/* purchase in steps: 1 jumlah · 2 cara bayar · 3 bukti · 4 konfirmasi */
+.inv-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin: 0; padding: 0; list-style: none; }
+.inv-steps li { display: flex; flex-direction: column; align-items: center; gap: 4px; padding-top: 8px; border-top: 3px solid var(--line); font-size: 11.5px; color: var(--muted); text-align: center; }
+.inv-steps .num { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--canvas); font-size: 12px; font-weight: 700; }
+.inv-steps li.is-done { border-top-color: var(--ok); }
+.inv-steps li.is-done .num { background: var(--ok-soft); color: var(--ok); }
+.inv-steps li.is-now { border-top-color: var(--brand); color: var(--ink); font-weight: 600; }
+.inv-steps li.is-now .num { background: var(--brand); color: var(--ink); }
+.inv-nav { display: flex; gap: 8px; }
+.inv-nav .btn { flex: 1; justify-content: center; }
+
+/* payment choice as cards */
+.inv-pay { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; border: 0; }
+.inv-pay legend { margin-bottom: 8px; font-size: 14px; font-weight: 700; }
+.inv-pay-opt { position: relative; display: flex; align-items: center; gap: 12px; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: var(--r-md); background: var(--surface); cursor: pointer; }
+.inv-pay-opt:has(input:checked) { border-color: var(--ink); background: var(--brand-soft); }
+.inv-pay-opt:has(input:focus-visible) { outline: 2px solid var(--brand); outline-offset: 2px; }
+.inv-pay-opt input { position: absolute; opacity: 0; pointer-events: none; }
+.inv-pay-opt > span:last-child { display: flex; flex-direction: column; gap: 2px; min-width: 0; font-size: 14px; }
+.inv-pay-opt small { color: var(--muted); font-size: 12.5px; }
+.inv-pay-ico { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--canvas); }
+.inv-pay-ico .ico { width: 20px; height: 20px; }
+
+/* where to pay, and the proof photo picker */
+.inv-payto { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-radius: var(--r-md); background: var(--canvas); font-size: 14px; }
+.inv-payto small { color: var(--muted); font-size: 12.5px; }
+
+.inv-brand { height: 28px; align-self: flex-start; }
+.inv-page-brand { height: 30px; }

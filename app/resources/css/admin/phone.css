@@ -1,0 +1,130 @@
+/* Admin on the phone. Loaded last by admin.css. Every rule sits behind the
+   admin phone breakpoint (719px, where list rows already turn into cards) or a touch pointer, so the desktop never
+   changes. Same app, phone shape: one column, cards instead of tables, thumb-sized controls. */
+
+/* S1 — fields at 16px on touch screens, or iOS zooms into them (.input beat the global rule for selects) */
+@media (pointer: coarse) {
+  .adm-body .input,
+  .adm-body select,
+  .adm-body textarea,
+  .adm-body input[type="date"],
+  .adm-body input[type="time"],
+  .adm-body input[type="month"],
+  .adm-body input[type="datetime-local"] { font-size: max(16px, 1em); }
+}
+
+@media (max-width: 719px) {
+  /* S2 — data tables stack as cards: the first cell is the title, the rest are label/value pairs (labels come from
+     the column headers, see resources/js/admin-table-labels.js); the footer total is one bold line */
+  .adm-content table[data-stacked] { width: 100%; min-width: 0 !important; border-collapse: collapse; }
+  .adm-content table[data-stacked] thead { display: none; }
+  .adm-content table[data-stacked] tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 14px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .adm-content table[data-stacked] tbody tr:last-child { border-bottom: 0; }
+  .adm-content table[data-stacked] td,
+  .adm-content table[data-stacked] tbody th,
+  .adm-content table[data-stacked] tfoot th { display: block; min-width: 0; padding: 0 !important; border: 0 !important; text-align: left !important; overflow-wrap: anywhere; }
+  .adm-content table[data-stacked] td::before,
+  .adm-content table[data-stacked] tbody th::before { content: attr(data-label); display: block; margin-bottom: 2px; color: var(--muted); font: 600 10.5px/1.3 var(--f-body, inherit); letter-spacing: .06em; text-transform: uppercase; }
+  .adm-content table[data-stacked] tr > :first-child { grid-column: 1 / -1; font-weight: 600; }
+  .adm-content table[data-stacked] tr > :first-child::before,
+  .adm-content table[data-stacked] [data-label=""]::before { content: none; }
+  .adm-content table[data-stacked] tfoot tr { grid-template-columns: minmax(0, 1fr) auto; border-top: 2px solid var(--line); border-bottom: 0; font-weight: 700; }
+  .adm-content table[data-stacked] tfoot tr > :first-child { grid-column: auto; }
+  .adm-content table[data-stacked] tfoot td::before { content: none; }
+
+  /* S3 — tab rows wrap into pills, every tab visible (no strip that hides tabs off-screen) */
+  .adm-tabs { flex-wrap: wrap; gap: 6px; overflow: visible; padding-bottom: 12px; }
+  .adm-tabs a { flex: 1 1 calc(50% - 6px); min-height: 40px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; padding: 8px 12px; border: 1px solid var(--line); border-radius: 99px; background: var(--surface); text-align: center; white-space: normal; }
+  .adm-tabs a[aria-current="page"] { border-color: var(--ink); background: var(--ink); color: #fff; }
+
+  /* S4 — figure tiles two to a row, whichever variant (store, recap, attendance, compact) */
+  .adm-kpis.store-kpis, .adm-kpis.store-kpis.is-recap, .adm-kpis.att-kpis, .adm-kpis.is-compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .adm-kpis .adm-kpi { border-left: 0; border-top: 0; }
+  .adm-kpis .adm-kpi:nth-child(even) { border-left: 1px solid var(--line); }
+  .adm-kpis .adm-kpi:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .adm-kpi-value { white-space: normal; overflow-wrap: anywhere; }
+
+  /* S5 — list cards: a status cell marked .adm-cell-status rides on the main line instead of a labelled block */
+  .adm-list-row > .adm-cell-status { grid-column: 1 / -1; order: -1; justify-self: start; }
+  .adm-list-row > .adm-cell-status::before { content: none !important; }
+
+  /* thumb-sized controls: nothing tappable under 40px */
+  .adm-content .btn-sm,
+  .adm-content .adm-cell-actions .btn,
+  .adm-content .adm-contact .btn,
+  .adm-content .adm-pill-btn,
+  .adm-content .adm-icon-btn.adm-icon-btn-sm { min-height: 40px; }
+  .adm-content .adm-icon-btn.adm-icon-btn-sm { min-width: 40px; }
+  .adm-content .btn { min-height: 40px; }
+  .adm-content .admin-pagination .btn { min-width: 40px; }
+  .adm-content .leaflet-container .leaflet-bar a { width: 40px; height: 40px; line-height: 40px; }
+  .adm-content .adm-pills { gap: 8px; }
+}
+
+/* Detail of a picked row (Pencocokan, Rute sales, Perjalanan sales) opens as a full-screen sheet on the phone,
+   instead of appearing somewhere below the list; Tutup brings the list back. The desktop keeps its panel. */
+@media (max-width: 719px) {
+  .adm-phone-sheet { position: fixed; inset: 0; z-index: 60; margin: 0 !important; overflow-y: auto; overscroll-behavior: contain; border: 0 !important; border-radius: 0 !important; background: var(--surface); animation: adm-sheet-in .18s ease-out; }
+  .adm-phone-sheet > .adm-panel-head,
+  .adm-phone-sheet > .adm-phone-sheet-head { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px var(--gutter); background: var(--surface); border-bottom: 1px solid var(--line); box-shadow: 0 1px 0 var(--line); }
+  .adm-phone-sheet.tracking-detail { padding: 0 0 24px; background: var(--canvas); }
+  .adm-phone-sheet.tracking-detail > :not(.adm-phone-sheet-head) { margin-inline: var(--gutter); }
+  .adm-phone-sheet.tracking-detail .tracking-map { height: 55vh; }
+  body:has(.adm-phone-sheet) { overflow: hidden; }
+  @keyframes adm-sheet-in { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+}
+@media (min-width: 720px) {
+  .adm-phone-sheet-head { display: none; }
+}
+
+/* S6 — the older detail cards (Komplain, Penukaran, Setoran: "<strong>Label:</strong> value") read as label over
+   value on the phone, like Pesanan detail. S7 — a form's Save stays in reach at the bottom while it scrolls. */
+@media (max-width: 719px) {
+  .adm-detail .card p:has(> strong:first-child) { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; margin: 0 0 12px; }
+  .adm-detail .card p > strong:first-child { color: var(--muted); font: 600 10.5px/1.3 var(--f-body, inherit); letter-spacing: .06em; text-transform: uppercase; }
+  .adm-content form > [data-save],
+  .adm-content form .att-actions:has(> [data-save]) { position: sticky; bottom: 0; z-index: 5; }
+  .adm-content form .att-actions:has(> [data-save]) { margin-inline: -16px; padding: 10px 16px; background: var(--surface); border-top: 1px solid var(--line); box-shadow: 0 -8px 16px -12px rgba(30, 35, 41, .35); }
+  .adm-content form > [data-save] { width: 100%; bottom: 12px; box-shadow: 0 8px 20px -8px rgba(30, 35, 41, .45); }
+  .adm-content form .att-actions:has(> [data-save]) [data-save] { width: 100%; }
+}
+@media (max-width: 719px) {
+  /* the content column clips instead of scrolling, so sticky Save follows the page */
+  .adm-content { overflow-x: clip; overflow-y: visible; }
+  .adm-detail .card p:has(> strong:first-child) { align-items: flex-start !important; }
+}
+@media (max-width: 719px) {
+  /* long unbroken values (coordinates, numbers) wrap inside their card instead of spilling out */
+  .adm-list-row > * { min-width: 0; overflow-wrap: anywhere; }
+}
+@media (max-width: 719px) {
+  /* Produk: the barcode field gets the full width, its lookup button goes under it */
+  .adm-barcode-row { flex-direction: column; align-items: stretch !important; }
+  /* Peta persebaran: title and Kembali share the line without breaking the button */
+  .adm-map-head { flex-wrap: wrap; gap: 8px; }
+  .adm-map-head .btn { white-space: nowrap; }
+  /* dialogs rise from the bottom, full width, like the sales app sheets */
+  .adm-dialog { width: 100vw; max-width: 100vw; max-height: 92vh; margin: auto 0 0; overflow-y: auto; border-radius: 16px 16px 0 0; border-bottom: 0; }
+  .adm-dialog-actions { position: sticky; bottom: -20px; padding-block: 12px; background: var(--surface); }
+  .adm-dialog-actions .btn { flex: 1; }
+}
+@media (max-width: 719px) {
+  /* a floating Save is solid even while disabled, so the fields behind never show through it */
+  .adm-content form > [data-save]:disabled { opacity: 1; border-color: var(--line); background: #F3E7BF; color: #8A7A4E; }
+  .adm-content form:has(> [data-save]) { padding-bottom: 8px; }
+}
+
+/* Admin PWA: the install hint is a phone thing; the steps read as a list */
+@media (max-width: 719px) {
+  .adm-install-hint { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); color: var(--ink); font-weight: 600; text-decoration: none; }
+  .adm-install-hint span { flex: 1; }
+}
+@media (min-width: 720px) {
+  .adm-install-hint { display: none !important; }
+}
+@media (min-width: 0) {
+  .adm-steps { display: grid; gap: 10px; margin: 0; padding-left: 20px; line-height: 1.5; }
+  .adm-steps .ico { width: 16px; height: 16px; vertical-align: -3px; }
+  .adm-install-address { margin: 8px 0 12px; padding: 12px; border: 1px dashed var(--line); border-radius: var(--r-sm); background: var(--canvas); font: 700 17px var(--f-display); text-align: center; overflow-wrap: anywhere; }
+  .adm-install .adm-panel + .adm-panel, .adm-install > div > .adm-panel { margin-top: 12px; }
+}

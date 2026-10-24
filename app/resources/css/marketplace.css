@@ -1,0 +1,24 @@
+/* Marketplace-only stylesheet (Direction A). Loaded by layouts/marketplace
+   instead of app.css, so Sales/Admin/Gudang never see these rules.
+   Each later task appends one @import line for its own area. */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import './marketplace/tokens.css';
+@import './marketplace/base.css';
+@import './marketplace/panels.css';
+@import './marketplace/forms.css';
+@import './ui/controls.css';
+@import './marketplace/product-card.css';
+@import './marketplace/header.css';
+@import './marketplace/home.css';
+@import './marketplace/layout-system.css';
+@import './marketplace/product-page.css';
+@import './marketplace/product-list.css';
+@import './marketplace/cart.css';
+@import './marketplace/orders.css';
+@import './marketplace/rewards.css';
+@import './marketplace/account.css';
+@import './marketplace/auth.css';
+@import './marketplace/notifications.css';
+@import './marketplace/search.css';
+@import './marketplace/investment.css';
+@import './ui/lines.css';

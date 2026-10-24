@@ -1,0 +1,22 @@
+/* Admin portal bundle. Loaded by layouts/admin only.
+   Marketplace tokens first, then the legacy Organic design system so the
+   not-yet-redesigned pages keep their classes, then legacy-map re-points the
+   old tokens at the marketplace palette, then the new adm-* shell/components. */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@import './marketplace/tokens.css';
+@import './design-system.css';
+@import './admin/legacy-map.css';
+@import './ui/controls.css';
+@import './admin/shell.css';
+@import './admin/components.css';
+@import './ui/lines.css';
+@import './marketplace/investment.css';
+@import './admin/phone.css';

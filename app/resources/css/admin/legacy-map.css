@@ -1,0 +1,69 @@
+/* Admin only: the legacy Organic tokens re-pointed at the marketplace palette,
+   so the admin pages not yet redesigned match the new shell without edits.
+   Must stay AFTER design-system.css (later :root wins). */
+:root {
+  --color-bg: var(--canvas);
+  --color-surface: var(--surface);
+  --color-text: var(--ink);
+  --color-accent: var(--brand);
+  --color-accent-2: var(--ink-2);
+  --color-divider: var(--line);
+
+  --color-neutral-100: #F5F6F8;
+  --color-neutral-200: #EEF0F2;
+  --color-neutral-300: #E6E8EB;
+  --color-neutral-400: #C9CDD3;
+  --color-neutral-500: #9AA1AB;
+  --color-neutral-600: #6B7480;
+  --color-neutral-700: #474D57;
+  --color-neutral-800: #2B3139;
+  --color-neutral-900: #1E2329;
+
+  --color-accent-2-100: #F5F6F8;
+  --color-accent-2-200: #EEF0F2;
+  --color-accent-2-300: #E6E8EB;
+  --color-accent-2-400: #C9CDD3;
+  --color-accent-2-500: #6B7480;
+  --color-accent-2-600: #474D57;
+  --color-accent-2-700: #2B3139;
+  --color-accent-2-800: #1E2329;
+  --color-accent-2-900: #16181D;
+
+  --color-success: var(--ok);
+  --color-success-bg: var(--ok-soft);
+  --color-danger: var(--sale);
+  --color-danger-bg: var(--sale-soft);
+
+  --font-heading: var(--f-display);
+  --font-body: var(--f-body);
+
+  --shadow-sm: var(--sh-1);
+  --shadow-md: var(--sh-2);
+  --shadow-lg: var(--sh-3);
+}
+
+/* design-system.css fills admin cards with --color-bg, which is now the grey
+   canvas; give them the white surface and the marketplace hairline instead. */
+.admin-content .card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: none;
+}
+.admin-content .input,
+.admin-content .dialog { background: var(--surface); }
+
+/* Bare links were brand-yellow text (unreadable on white). */
+.admin-content a:not([class]) { color: var(--ink); text-decoration: underline; text-decoration-color: var(--brand); text-underline-offset: 3px; }
+
+/* x-ui.field-error (was in app.css) */
+.field-error { color: var(--sale); font-size: 12px; }
+
+
+/* Brand fills carry ink text (marketplace rule); the legacy active chip used white. */
+.admin-content .mp-cat-chip.is-active { color: var(--ink); }
+.admin-content .btn-primary { color: var(--ink); }
+
+/* Component display rules (.btn is inline-flex) must not beat the hidden
+   attribute, or JS-toggled controls like the push button never hide. */
+[hidden] { display: none !important; }

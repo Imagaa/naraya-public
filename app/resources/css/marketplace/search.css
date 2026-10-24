@@ -1,0 +1,52 @@
+/* Header search (livewire/marketplace/search-box). While open, a fixed
+   backdrop blurs and dims everything, header included; the box and its
+   panel sit above it. .hdr has no stacking context, so these z-indexes are
+   page-global: above the tabbar/buybar (30) and the bell panel (40). */
+.sbox { grid-column: 1 / -1; order: 3; position: relative; }
+.sbox .search { position: relative; }
+/* No native clear (×) button: it renders browser-blue, off theme; the search icon already sits on the left. */
+.search input::-webkit-search-cancel-button { -webkit-appearance: none; display: none; }
+.sbox.is-open .search { z-index: 46; background: var(--surface); border-color: var(--ink-2); }
+
+.sbox-backdrop { position: fixed; inset: 0; z-index: 45; background: rgba(30, 35, 41, .28); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+
+.sbox-panel { position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 46; max-height: min(70vh, 520px); overflow-y: auto; overscroll-behavior: contain; padding: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); box-shadow: var(--sh-3); }
+
+.sbox-opt { border-radius: 8px; }
+.sbox-opt:hover, .sbox-opt.is-active { background: var(--canvas); }
+
+.sbox-all { display: flex; align-items: center; gap: 10px; padding: 10px; font-size: 14px; }
+.sbox-all .ico { width: 18px; height: 18px; flex: none; color: var(--muted); }
+.sbox-all-text { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sbox-count { flex: none; font-size: 12px; font-weight: 600; color: var(--ink); background: var(--brand-soft); border-radius: 99px; padding: 2px 8px; }
+
+.sbox-item { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 6px 8px; }
+.sbox-ph { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 8px; overflow: hidden; background: var(--canvas); color: var(--muted); }
+.sbox-ph img { width: 100%; height: 100%; object-fit: cover; }
+.sbox-ph .ph-icon { width: 50%; height: 50%; }
+.sbox-name { font-size: 13.5px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.sbox-out { display: block; font-size: 11px; font-weight: 600; color: var(--sale); }
+.sbox-price { display: grid; justify-items: end; text-align: right; white-space: nowrap; }
+.sbox-price s { font-size: 11px; color: var(--muted); }
+.sbox-price strong { font-size: 13.5px; }
+.sbox-price small { font-size: 11px; color: var(--muted); }
+
+.sbox-empty { margin: 0; padding: 16px 10px; font-size: 13px; color: var(--muted); }
+
+.sbox-head { display: flex; align-items: center; justify-content: space-between; padding: 10px 10px 4px; font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.sbox-clear { border: 0; background: none; padding: 0; font: inherit; font-size: 12px; text-transform: none; letter-spacing: 0; color: var(--ink); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+
+.sbox-past { display: flex; align-items: center; }
+.sbox-past .sbox-opt { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; padding: 9px 10px; font-size: 14px; }
+.sbox-past .sbox-opt .ico { width: 16px; height: 16px; flex: none; color: var(--muted); }
+.sbox-forget { display: grid; place-items: center; width: 32px; height: 32px; border: 0; border-radius: 8px; background: none; color: var(--muted); cursor: pointer; }
+.sbox-forget:hover { background: var(--canvas); color: var(--ink); }
+.sbox-forget .ico { width: 14px; height: 14px; }
+
+.sbox-chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 4px 10px 10px; }
+.sbox-chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 99px !important; font-size: 13px; }
+.sbox-chip .ico { width: 14px; height: 14px; color: var(--brand-hover); }
+
+@media (min-width: 640px) {
+  .sbox { grid-column: auto; order: 0; }
+}

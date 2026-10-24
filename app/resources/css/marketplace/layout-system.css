@@ -1,0 +1,58 @@
+/* Shared layout system: action rows, section bands, product rails, sticky cart bar. */
+
+/* Action rows: [secondary][primary], right-aligned; split evenly on phones, a lone action full width. */
+.actions { display: flex; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
+.actions > * { flex: 1 1 0; justify-content: center; }
+.actions.is-single > * { flex-basis: 100%; }
+@media (min-width: 640px) { .actions > *, .actions.is-single > * { flex: 0 0 auto; } }
+
+/* Segment bands (.seg, not .band — that is the order-status banner): full-width, alternating surface and canvas. */
+.seg { padding: 28px 0; }
+.seg-plain { background: var(--surface); }
+.seg-tint { background: var(--canvas); }
+.seg + .seg { border-top: 1px solid var(--line); }
+@media (min-width: 1024px) { .seg { padding: 40px 0; } }
+
+/* Product rails: swipe on phones (the next card peeks in), 5 per view with ‹ › from 1024px. */
+.rail-wrap { position: relative; }
+.rail { display: grid; grid-auto-flow: column; grid-auto-columns: 44%; gap: 10px; scroll-snap-type: x mandatory; padding-bottom: 4px; }
+.rail > * { scroll-snap-align: start; }
+.rail-nav { display: none; }
+@media (min-width: 640px) { .rail { grid-auto-columns: calc((100% - 30px) / 4); } }
+@media (min-width: 1024px) {
+  .rail { grid-auto-columns: calc((100% - 40px) / 5); }
+  .rail-nav { display: grid; place-items: center; position: absolute; top: 38%; z-index: 2; width: 40px; height: 40px; border-radius: 99px; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--sh-2); color: var(--ink); cursor: pointer; }
+  .rail-nav:hover { border-color: var(--line-2); }
+  .rail-prev { left: -20px; }
+  .rail-next { right: -20px; }
+}
+
+/* Sticky cart bar: above the tab bar on phones, a pill at the bottom right from 640px. */
+.cart-bar { position: fixed; z-index: 29; left: 12px; right: 12px; bottom: calc(64px + env(safe-area-inset-bottom, 0px)); display: flex; align-items: center; gap: 10px; padding: 10px 10px 10px 14px; border-radius: var(--r-md); background: var(--ink); color: #fff; box-shadow: var(--sh-3); }
+.cart-bar-text { flex: 1; min-width: 0; font-size: 14px; }
+.cart-bar-ico { display: grid; place-items: center; }
+@media (min-width: 640px) { .cart-bar { left: auto; right: 24px; bottom: 24px; min-width: 340px; } }
+.page.has-cart-bar { padding-bottom: 72px; }
+
+/* Page-level actions: inline from 1024px only; phones use the sticky bar instead. */
+.hide-phone-flex { display: none !important; }
+@media (min-width: 1024px) { .hide-phone-flex { display: flex !important; } }
+
+/* Themed horizontal scrollers: no browser scrollbar; a soft fade marks the side
+   that has more (classes set by the Alpine `hscroll` helper), and from 1024px
+   round ‹ › buttons appear on that side only. */
+.hscroll { overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; --fl: 0px; --fr: 0px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 var(--fl), #000 calc(100% - var(--fr)), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 var(--fl), #000 calc(100% - var(--fr)), transparent 100%); }
+.hscroll::-webkit-scrollbar { display: none; }
+.hscroll.can-left { --fl: 32px; }
+.hscroll.can-right { --fr: 32px; }
+.hscroll-wrap { position: relative; min-width: 0; }
+.hscroll-btn { display: none; }
+@media (min-width: 1024px) {
+  .hscroll-btn { position: absolute; top: 50%; z-index: 2; transform: translateY(-50%); display: grid; place-items: center; width: 32px; height: 32px; padding: 0; border-radius: 99px; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--sh-2); color: var(--ink); cursor: pointer; }
+  .hscroll-btn:hover { border-color: var(--line-2); }
+  .hscroll-btn .ico { width: 16px; height: 16px; }
+  .hscroll-btn.hscroll-prev { left: -4px; }
+  .hscroll-btn.hscroll-next { right: -4px; }
+}

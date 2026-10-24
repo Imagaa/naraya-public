@@ -1,0 +1,96 @@
+# Deploy with ./deploy.sh (zero downtime): it builds, starts the new app container beside the old one, waits for its
+# healthcheck, then retires the old one — never a plain "up -d" of app, which stops the old one first.
+services:
+  app:
+    build:
+      context: .
+      args:
+        OPCACHE_VALIDATE_TIMESTAMPS: "0"
+    volumes:
+      - ./storage:/var/www/html/storage
+      - shared-public:/shared-public # filled by docker/entrypoint.sh, served by nginx
+    env_file: .env
+    depends_on: [db, redis, garage]
+    restart: unless-stopped
+    # healthy = PHP-FPM answers Laravel's /up through FastCGI, i.e. the container can take real requests
+    healthcheck:
+      test: ["CMD-SHELL", "SCRIPT_FILENAME=/var/www/html/public/index.php SCRIPT_NAME=/index.php REQUEST_URI=/up REQUEST_METHOD=GET SERVER_NAME=localhost SERVER_PORT=80 cgi-fcgi -bind -connect 127.0.0.1:9000 | grep -q 'Application up'"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+      start_period: 120s
+    # SIGQUIT = PHP-FPM's graceful stop: requests in flight finish before the old container goes
+    stop_signal: SIGQUIT
+    stop_grace_period: 30s
+
+  scheduler:
+    build:
+      context: .
+      args:
+        OPCACHE_VALIDATE_TIMESTAMPS: "0"
+    volumes:
+      - ./storage:/var/www/html/storage
+    env_file: .env
+    depends_on: [db, redis, garage]
+    restart: unless-stopped
+    # Overrides the image's default entrypoint (chown + migrate + php-fpm) —
+    # this container's only job is running due scheduled tasks once a
+    # minute, which is what actually fires payments:reconcile and the new
+    # orders:auto-complete-deliveries; nothing was running them before this.
+    entrypoint: ["php", "artisan", "schedule:work"]
+
+  # Plain nginx, never rebuilt: the site's files come from the shared-public volume (filled by the app container) and
+  # its config from this repo, re-rendered and reloaded by deploy.sh without a restart.
+  nginx:
+    image: nginx:alpine
+    environment:
+      PORT: 80
+      PHP_HOST: app
+    volumes:
+      - shared-public:/var/www/html/public:ro
+      - ./docker/nginx/default.conf.prod.template:/etc/nginx/templates/default.conf.template:ro
+    ports: ["127.0.0.1:8080:80"]
+    depends_on: [app]
+    restart: unless-stopped
+
+  db:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: naraya
+      MYSQL_USER: naraya
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    volumes: ["db-data:/var/lib/mysql"]
+    restart: unless-stopped
+    # No published port — the app container reaches this over the internal
+    # compose network (service name "db"), and it never needs to be reachable
+    # from the host or the internet. Docker's own iptables rules for a
+    # published port would bypass UFW entirely, so "just don't publish it" is
+    # the actual security boundary here, not the firewall.
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    # Same reasoning as db — internal network only, no published port.
+
+  garage:
+    image: dxflrs/garage:v1.0.1
+    environment:
+      GARAGE_RPC_SECRET: ${GARAGE_RPC_SECRET}
+    volumes:
+      - ./docker/garage/garage.prod.toml:/etc/garage.toml
+      - garage-data:/var/lib/garage
+    ports: ["127.0.0.1:3902:3902"]
+    restart: unless-stopped
+    # Only s3_web (public photo reads) is published, and only to loopback —
+    # cloudflared (running on the host, not in Docker) reaches it via
+    # localhost with its own public ingress hostname. s3_api/rpc/admin
+    # (3900/3901/3903) are never published: the app and the CLI both reach
+    # this container over the internal compose network / its own loopback
+    # inside `docker compose exec`, so there's nothing on the host that
+    # needs them exposed.
+
+volumes:
+  db-data:
+  garage-data:
+  shared-public:

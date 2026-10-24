@@ -1,0 +1,4 @@
+
+# Local snapshots (database copies etc.) — never committed
+/backups/
+

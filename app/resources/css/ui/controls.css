@@ -1,0 +1,122 @@
+/* x-ui.checkbox — native checkbox in three looks (plain, chip, switch). Shared by every portal. */
+.check { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink); cursor: pointer; user-select: none; }
+.check input { width: 18px; height: 18px; margin: 0; accent-color: var(--ink); cursor: pointer; }
+.check input:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+.check-chip { position: relative; height: 34px; padding: 0 14px; border: 1px solid var(--line); border-radius: 99px; background: var(--surface); font-size: 13px; font-weight: 500; }
+.check-chip input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.check-chip:has(input:checked) { background: var(--ink); border-color: var(--ink); color: #fff; }
+.check-chip:has(input:focus-visible) { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+.check-switch input { appearance: none; -webkit-appearance: none; position: relative; width: 38px; height: 22px; border-radius: 99px; background: var(--line-2); transition: background .15s; }
+.check-switch input::after { content: ''; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(0, 0, 0, .25); transition: transform .15s; }
+.check-switch input:checked { background: var(--ok); }
+.check-switch input:checked::after { transform: translateX(16px); }
+
+.check-group { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; border: 0; }
+.check-group > legend { padding: 0; margin-bottom: 8px; font-size: 13px; font-weight: 600; color: var(--ink); }
+
+/* x-ui.line-switch — segmented business line switch (admin top bar, sales header) */
+.line-switch { display: inline-flex; padding: 3px; gap: 2px; border: 1px solid var(--line); border-radius: 99px; background: var(--surface); }
+.line-switch button { height: 30px; padding: 0 12px; border: 0; border-radius: 99px; background: none; color: var(--muted); font: 600 12.5px var(--f-body, inherit); white-space: nowrap; cursor: pointer; }
+.line-switch button:hover { color: var(--ink); }
+.line-switch button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+.line-switch button:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+/* x-ui.qty-stepper — the marketplace .step with a typeable number in the middle */
+.step-input input { width: 46px; height: 100%; border: 0; background: none; text-align: center; font-weight: 700; font-size: 14px; color: var(--ink); -moz-appearance: textfield; appearance: textfield; }
+.step-input input::-webkit-outer-spin-button, .step-input input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.step-input input:focus-visible { outline: 2px solid var(--brand); outline-offset: -2px; border-radius: 6px; }
+
+/* Phones zoom into any field whose text is under 16px (iOS) and leave the page zoomed,
+   so every text field and the stepper's number use at least 16px on touch screens. */
+@media (pointer: coarse) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]), select, textarea { font-size: max(16px, 1em); }
+  .step-input input { font-size: 16px; }
+}
+
+/* Brand-kit logos (x-brand.logo). Sizes keep the kit minimums: naraya lockup >= 120 px wide, line lockups >= 160 px, line symbols >= 32 px. */
+.brand-logo { display: block; width: auto; max-width: none; }
+.logo-img { height: 32px; }
+
+/* x-ui.line-switch with logos: the pressed one sits on white with a ring; the other is dimmed. Never a dark or yellow ground behind a coloured logo. */
+.line-switch-logos { padding: 3px; }
+.line-switch-logos button { display: inline-flex; align-items: center; height: auto; padding: 5px 12px; color: inherit; }
+.line-switch-logos button .brand-logo { height: 26px; opacity: .45; transition: opacity .15s; }
+.line-switch-logos button:hover .brand-logo { opacity: .8; }
+.line-switch-logos button[aria-pressed="true"] { background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--ink); }
+.line-switch-logos button[aria-pressed="true"] .brand-logo { opacity: 1; }
+.line-switch-logos.is-symbols button { padding: 2px 6px; }
+.line-switch-logos.is-symbols button .brand-logo { height: 32px; width: 32px; }
+/* a closed line (grosir while it is being built): dimmed logo, caption beside it, not clickable */
+.line-switch button.is-soon { gap: 4px; cursor: default; }
+.line-switch button.is-soon:hover { color: var(--muted); }
+.line-switch button.is-soon .brand-logo { opacity: .25; }
+.line-soon { max-width: 64px; font: 600 9.5px/1.15 var(--f-body, inherit); color: var(--muted); text-align: left; white-space: normal; }
+
+/* x-ui.file-picker: dashed box around a visually hidden native file input */
+label.file-pick { display: flex; align-items: center; gap: 14px; margin: 0; padding: 16px; font-size: 14px; font-weight: 400; color: var(--ink); border: 1.5px dashed #D6C27A; border-radius: var(--r-md); background: var(--brand-soft); cursor: pointer; text-align: left; }
+.file-pick:hover { border-color: var(--ink); }
+.file-pick:has(input:focus-visible) { outline: 2px solid var(--brand); outline-offset: 2px; }
+.file-pick.has-file { border-style: solid; border-color: var(--ok); background: var(--ok-soft); }
+.file-pick img { width: 64px; height: 64px; object-fit: cover; border-radius: 10px; flex: none; }
+.file-pick-ico { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 12px; background: var(--surface); }
+.file-pick-ico .ico { width: 24px; height: 24px; }
+.file-pick-text { display: flex; flex-direction: column; gap: 2px; font-size: 14px; min-width: 0; }
+.file-pick-text b { font-weight: 600; }
+.file-pick-text small { color: var(--muted); font-size: 12.5px; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* livewire:store-account — "Akun toko" panel on the sales and admin store pages */
+.store-account, .store-account-form { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.store-account-form { align-items: stretch; }
+.store-account-form .line-switch { align-self: flex-start; }
+.store-account-state { margin: 0; font-size: 14px; line-height: 1.5; }
+.store-account-hint { margin: 0; font-size: 12.5px; color: var(--muted); }
+.store-account-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* x-ui.unit-qty: "[ ] lembar [ ] pcs" — a quantity in pcs entered as whole units plus loose pieces */
+.unit-qty { display: inline-flex; align-items: center; gap: 4px; }
+.unit-qty .input { width: 52px; height: 34px; padding: 0 6px; text-align: center; }
+.unit-qty small { font-size: 12px; color: var(--muted); }
+
+/* x-ui.unit-stepper — − [n] + in whole units (lembar); x-ui.unit-qty keeps units + loose pcs */
+.unit-step { display: inline-flex; align-items: center; gap: 6px; }
+.unit-step small, .unit-qty small { font-size: 12px; color: var(--muted); }
+.step button:disabled { opacity: .35; cursor: default; }
+
+/* x-ui.confirm-button — the app's own "are you sure?" dialog */
+.confirm-dialog { width: min(92vw, 380px); padding: 20px; border: 0; border-radius: 16px; background: var(--surface); color: var(--ink); box-shadow: 0 20px 50px rgba(0, 0, 0, .25); }
+.confirm-dialog::backdrop { background: rgba(15, 15, 15, .45); }
+.confirm-dialog p { margin: 0 0 16px; font-size: 15px; line-height: 1.45; }
+.confirm-actions { display: flex; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
+.confirm { display: contents; }
+
+/* the Android app's update bar (resources/js/app-update.js): sales pages and the staff login */
+.app-update { position: fixed; left: 12px; right: 12px; bottom: 76px; z-index: 50; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 12px; border-radius: 12px; background: var(--ink); color: #fff; font-size: 13.5px; box-shadow: 0 6px 24px rgb(0 0 0 / .25); }
+.app-update span { flex: 1 1 100%; }
+
+/* x-sandbox-ribbon — only on the sandbox server (config naraya.sandbox) */
+.sandbox-ribbon { position: sticky; top: 0; z-index: 60; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 12px; padding: 6px 12px; background: repeating-linear-gradient(-45deg, #F0B90B 0 12px, #F5CB45 12px 24px); color: #1E2329; font: 600 12.5px/1.3 var(--f-body, sans-serif); text-align: center; }
+.sandbox-ribbon form { margin: 0; }
+/* the sales sheets and panels are fixed full-screen: on the sandbox they start under the ribbon, so their header shows */
+body:has(.sandbox-ribbon) :is(.sales-sheet, .store-panel) { top: 29px; }
+.sandbox-ribbon button { padding: 3px 10px; border: 1px solid #1E2329; border-radius: 99px; background: #fff; color: #1E2329; font: inherit; cursor: pointer; }
+.sandbox-logins { display: grid; gap: 2px; margin: 12px auto; max-width: 420px; padding: 10px 12px; border: 1px dashed #F0B90B; border-radius: 10px; background: #FFF9E6; font-size: 13px; }
+
+/* x-ui.item-lines / x-ui.qty-total — goods one per line, totals with their unit (admin stock pages, sales history) */
+.item-lines { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; font-size: 13.5px; line-height: 1.35; }
+.item-lines li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.item-lines li span { min-width: 0; color: var(--ink-2, var(--ink)); }
+.item-lines li b { flex: none; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.item-lines-more { margin-top: 2px; font-size: 13px; }
+.item-lines-more summary { color: var(--muted); cursor: pointer; }
+.item-lines-more[open] summary { margin-bottom: 2px; }
+.qty-total { display: inline-flex; flex-direction: column; line-height: 1.25; font-variant-numeric: tabular-nums; }
+.qty-total b { white-space: nowrap; }
+.qty-total small { color: var(--muted); font-size: 12px; }
+.item-lines-sm { margin-top: 4px; font-size: 12.5px; }
+.item-lines li span { hyphens: none; }
+
+/* Leaflet stacks its panes at z-index 400+; isolate the map so it never covers the side panel, dialogs or sheets */
+.leaflet-container { isolation: isolate; z-index: 0; }

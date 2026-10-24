@@ -1,0 +1,61 @@
+/* Rewards: the dark points card with next-reward progress, the
+   three-step explainer, the reward grid and redemption history. */
+
+.pts-hero { position: relative; overflow: hidden; display: grid; gap: 18px; padding: 22px 20px; border-radius: var(--r-lg); background: var(--night); color: #fff; }
+.pts-hero::before { content: ""; position: absolute; width: 300px; height: 300px; right: -150px; top: -140px; border-radius: 50%; border: 52px solid var(--brand); pointer-events: none; }
+.pts-hero > * { position: relative; }
+.pts-big { display: grid; gap: 4px; }
+.pts-big > span { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--brand); }
+.pts-big b { font-family: var(--f-display); font-size: 44px; line-height: 1; letter-spacing: -0.03em; }
+.pts-big b small { margin-left: 6px; font-size: 18px; font-weight: 700; letter-spacing: 0; color: var(--night-text); }
+.pts-big p { color: var(--night-text); font-size: 13px; }
+.next { display: grid; gap: 10px; padding: 14px; border-radius: var(--r-md); background: var(--night-2); border: 1px solid rgba(255, 255, 255, .08); }
+.next-top { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 12px; align-items: center; }
+.next-top .ph { width: 48px; height: 48px; border-radius: 10px; }
+.next-top b { display: block; font-size: 14px; }
+.next-top span span { font-size: 12.5px; color: var(--night-text); }
+.meter { height: 8px; border-radius: 99px; background: rgba(255, 255, 255, .12); overflow: hidden; }
+.meter i { display: block; width: var(--pct, 0%); height: 100%; border-radius: 99px; background: var(--brand); }
+.meter-cap { display: flex; justify-content: space-between; font-size: 12px; color: var(--night-text); }
+
+.how { display: grid; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.how li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 12px; align-items: center; padding: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); }
+.how b { display: block; font-size: 14px; }
+.how li > span:last-child > span { font-size: 12.5px; color: var(--muted); }
+
+.rewards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.reward { display: grid; gap: 8px; align-content: start; padding: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); }
+.reward .ph { border-radius: 12px; }
+.reward .stock { position: absolute; top: 8px; left: 8px; height: 22px; font-size: 11px; }
+.reward h3 { font: 600 13.5px/1.3 var(--f-body); letter-spacing: 0; min-height: 2.6em; }
+.cost { display: flex; align-items: center; gap: 6px; font-weight: 700; }
+.cost .ico { width: 16px; height: 16px; color: var(--brand-hover); }
+.short { display: grid; gap: 5px; font-size: 12px; color: var(--muted); }
+.short .meter { height: 5px; background: var(--canvas); }
+.short .meter i { background: var(--ink-2); }
+
+.hist-row { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding-block: 12px; border-top: 1px solid var(--line); }
+.panel-head + .hist-row { border-top: 0; padding-top: 0; }
+.hist-row b { display: block; font-size: 14px; }
+.hist-row > span:nth-child(2) > span { font-size: 12.5px; color: var(--muted); }
+.hist-row .r { display: grid; justify-items: end; gap: 4px; }
+.hist-row .r em, .hist-row .r s { font-style: normal; font-size: 13px; font-weight: 700; }
+.hist-row .r s { color: var(--muted); }
+
+@media (min-width: 640px) {
+  .pts-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; padding: 28px; }
+  .how { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .how li { align-items: start; }
+  .rewards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .pts-hero { gap: 32px; padding: 32px 36px; }
+  .pts-big b { font-size: 56px; }
+  .rewards { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+}
+
+/* Phones: a smaller ring tucked into the corner so it never covers the copy ("poin masuk…"). */
+@media (max-width: 639px) {
+  .pts-hero::before { width: 180px; height: 180px; right: -100px; top: -100px; border-width: 32px; }
+  .pts-big p { max-width: 30ch; }
+}

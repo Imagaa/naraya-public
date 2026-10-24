@@ -1,0 +1,45 @@
+.git
+.env
+.env.backup
+.env.production
+.env.sandbox
+# the sandbox server's runtime folder (docker-compose.sandbox.yml)
+storage-sandbox
+node_modules
+vendor
+public/build
+public/hot
+public/storage
+database/database.sqlite
+
+# storage/ is bind-mounted over at runtime (docker-compose.prod.yml), but
+# `composer install`'s package:discover step boots Laravel *during the
+# build* (before any bind mount exists) and needs the real directory
+# skeleton in place (e.g. storage/framework/views) or it fails outright.
+# So: exclude runtime content (uploads, logs, cache, livewire's temp
+# upload dir — never used from the image anyway, and can carry
+# permissions the host user running `docker build` can't even read) but
+# keep the tracked .gitignore placeholders, which is what gives each
+# directory its on-disk existence. Docker's ignore-negation can't reliably
+# re-include a file once a wildcard excludes its parent, so each directory
+# is listed explicitly rather than one blanket "storage/**" pattern.
+storage/app/*
+!storage/app/.gitignore
+storage/app/public/*
+!storage/app/public/.gitignore
+storage/app/private/*
+!storage/app/private/.gitignore
+storage/framework/*
+!storage/framework/.gitignore
+storage/framework/cache/*
+!storage/framework/cache/.gitignore
+storage/framework/cache/data/*
+!storage/framework/cache/data/.gitignore
+storage/framework/sessions/*
+!storage/framework/sessions/.gitignore
+storage/framework/testing/*
+!storage/framework/testing/.gitignore
+storage/framework/views/*
+!storage/framework/views/.gitignore
+storage/logs/*
+!storage/logs/.gitignore

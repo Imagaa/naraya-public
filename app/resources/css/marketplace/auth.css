@@ -1,0 +1,70 @@
+/* Login: dark brand panel beside the form from 640px, a compact band
+   above it on phones. One DOM for every width. */
+
+.auth { display: grid; min-height: 100dvh; background: var(--surface); }
+.auth-brand { position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; align-content: start; padding: 22px 20px 26px; background: var(--night); color: #fff; }
+.auth-brand::before { content: ""; position: absolute; width: 260px; height: 260px; right: -130px; top: -130px; border-radius: 50%; border: 46px solid var(--brand); pointer-events: none; }
+.auth-brand > * { position: relative; }
+.auth-brand .logo { color: #fff; }
+.auth-brand .logo small { color: var(--night-text); border-color: rgba(255, 255, 255, .2); }
+.auth-brand h2 { font-size: 26px; line-height: 1.12; max-width: 16ch; }
+.auth-brand h2 em { font-style: normal; color: var(--brand); }
+.auth-points { display: none; gap: 14px; list-style: none; margin: 0; padding: 0; }
+.auth-points li { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px; align-items: center; font-size: 13.5px; color: var(--night-text); }
+.auth-points b { display: block; font-size: 14px; color: #fff; }
+.auth-points .tile { width: 36px; height: 36px; background: rgba(255, 255, 255, .08); color: var(--brand); }
+.auth-form { display: grid; gap: 16px; align-content: start; justify-self: center; width: 100%; max-width: 420px; padding: 24px 20px 32px; }
+.auth-form .pg-head h1 { font-size: 26px; }
+.auth-back { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.auth-back:hover { color: var(--ink); }
+
+@media (min-width: 640px) {
+  .auth { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .auth-brand { align-content: space-between; padding: 36px; }
+  .auth-brand h2 { font-size: 34px; }
+  .auth-points { display: grid; }
+  .auth-form { align-content: center; padding: 40px 32px; }
+}
+@media (min-width: 1024px) {
+  .auth-brand { padding: 48px; }
+  .auth-brand h2 { font-size: 42px; }
+}
+
+.auth-alt { margin: 0; text-align: center; color: var(--ink-2); font-size: 14px; }
+.auth-alt a { font-weight: 600; color: var(--ink); text-decoration: underline; }
+/* Registration: grouped sections, and the confirmation card after submitting. */
+.reg-section { display: grid; gap: 12px; margin: 0; padding: 16px 0 0; border: 0; border-top: 1px solid var(--line); min-width: 0; }
+.reg-section legend { padding: 0 0 8px; font: 700 15px var(--f-display); color: var(--ink); }
+.auth-done { align-content: center; justify-items: start; gap: 14px; }
+.auth-done h1 { font-size: 24px; }
+.auth-done p { color: var(--ink-2); }
+
+/* Portal chooser on the old shared staff address (auth/staff-portals) */
+.portal-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.portal-link { display: grid; grid-template-columns: 40px minmax(0, 1fr) 20px; gap: 12px; align-items: center; padding: 14px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); color: var(--ink); text-decoration: none; }
+.portal-link:hover, .portal-link:focus-visible { border-color: var(--ink); outline: none; }
+.portal-link b { display: block; font-size: 15px; }
+.portal-link span:not(.tile) { font-size: 13px; color: var(--muted); }
+.portal-link .tile { display: grid; place-items: center; width: 40px; height: 40px; border-radius: var(--r-sm); background: var(--brand-soft); color: var(--ink); }
+
+/* Closed-portal notices (marketplace on hold, gudang off) */
+.portal-notice { display: grid; gap: 14px; justify-items: start; max-width: 520px; margin: 0 auto; padding: 18vh 20px 40px; }
+.portal-notice h1 { margin: 0; font: 800 26px/1.2 var(--f-display); }
+.portal-notice p { margin: 0; color: var(--muted); line-height: 1.55; }
+
+/* brand-kit logos on the login panels and the closed-portal notices */
+.auth-brand .logo { display: inline-flex; align-items: center; gap: 10px; }
+.auth-brand .logo-img { height: 34px; }
+.portal-notice .logo { display: inline-flex; align-items: center; gap: 10px; }
+.portal-notice .logo-img { height: 36px; }
+/* Masuk dengan: Nomor HP | Email (x-ui.line-switch look, full width) */
+.auth-method { display: flex; width: 100%; }
+.auth-method button { flex: 1; height: 36px; font-size: 13.5px; }
+/* the three business lines on the login panel, one height so they read as a set. Phone: one row filling the width
+   (each grows by its own width/height, --w, so heights match; ~16 px tall at 375 px). From 640 px: 28 px, wrapping. */
+.auth-lines { display: flex; align-items: center; gap: 10px; }
+.auth-line-logo { flex: var(--w) 1 0; min-width: 0; height: auto; }
+@media (min-width: 640px) {
+  .auth-lines { flex-wrap: wrap; gap: 12px 20px; }
+  .auth-line-logo { flex: none; height: 28px; width: auto; }
+}

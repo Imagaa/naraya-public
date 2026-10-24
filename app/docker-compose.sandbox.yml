@@ -1,0 +1,37 @@
+# The sandbox server (naraya-coba.example.com): the production images with made-up data, for trying the app on a real
+# phone. It follows production by itself: ./deploy.sh ends with
+#   docker compose -p naraya-coba -f docker-compose.sandbox.yml up -d
+# It borrows production's MySQL server (its own database naraya_coba), Redis (its own DB numbers) and Garage (its own
+# folder coba/ in the bucket) over production's network; .env.sandbox holds its settings (SANDBOX=true).
+# Reset: the admin's "Reset data coba" button, or `docker compose -p naraya-coba -f docker-compose.sandbox.yml exec -u www-data coba php artisan sandbox:reset`.
+services:
+  # not "app": on production's network that name would also answer for production's own nginx
+  coba:
+    image: naraya-app-app
+    pull_policy: never
+    volumes:
+      - ./storage-sandbox:/var/www/html/storage
+      - coba-public:/shared-public
+    env_file: .env.sandbox
+    networks: [default, production]
+    restart: unless-stopped
+
+  coba-nginx:
+    image: nginx:alpine
+    environment:
+      PORT: 80
+      PHP_HOST: coba
+    volumes:
+      - coba-public:/var/www/html/public:ro
+      - ./docker/nginx/default.conf.prod.template:/etc/nginx/templates/default.conf.template:ro
+    ports: ["127.0.0.1:8081:80"]
+    depends_on: [coba]
+    restart: unless-stopped
+
+volumes:
+  coba-public:
+
+networks:
+  production:
+    external: true
+    name: naraya-app_default

@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace "id.naraya.sales"
+    compileSdk rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "id.naraya.sales"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        // bump both for every release, then: php artisan android:publish <apk> <versionCode> <versionName>
+        versionCode 3
+        versionName "1.0.2"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        aaptOptions {
+             // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
+             // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
+            ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
+        }
+    }
+    // Two apps from this project, installable side by side:
+    //   prod = "Naraya Sales" (id.naraya.sales) on naraya-sales.example.com, the live data;
+    //   coba = "Naraya Coba" (id.naraya.sales.coba) on naraya-coba-sales.example.com, the sandbox to try things on.
+    // Build both with ./gradlew assembleRelease (APKs under build/outputs/apk/{prod,coba}/release/).
+    flavorDimensions "server"
+    productFlavors {
+        prod { dimension "server" }
+        coba { dimension "server"; applicationIdSuffix ".coba" }
+    }
+    sourceSets.coba.assets.srcDirs += "$buildDir/generated/coba-assets"
+    // release key: mobile/android/keystore.properties + the .keystore it names, both kept out of git. Back them up:
+    // without the same key, phones cannot update and must uninstall first.
+    def keystorePropertiesFile = rootProject.file("keystore.properties")
+    def keystoreProperties = new Properties()
+    if (keystorePropertiesFile.exists()) {
+        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+    }
+    signingConfigs {
+        release {
+            if (keystorePropertiesFile.exists()) {
+                storeFile file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+            }
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir{
+        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
+    implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
+    implementation project(':capacitor-android')
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
+    implementation project(':capacitor-cordova-android-plugins')
+}
+
+apply from: 'capacitor.build.gradle'
+
+try {
+    def servicesJSON = file('google-services.json')
+    if (servicesJSON.text) {
+        apply plugin: 'com.google.gms.google-services'
+    }
+} catch(Exception e) {
+    logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
+}
+
+// Naraya Coba's Capacitor config = the prod one (written by `npx cap sync`) pointed at the sandbox server, made at
+// build time so the two can never drift apart. Flavor assets win over main/, so the coba APK carries this one.
+def cobaConfig = tasks.register('cobaCapacitorConfig') {
+    def src = file('src/main/assets/capacitor.config.json')
+    def out = file("$buildDir/generated/coba-assets/capacitor.config.json")
+    inputs.file(src)
+    outputs.file(out)
+    doLast {
+        out.parentFile.mkdirs()
+        out.text = src.text
+            .replace('naraya-sales.example.com', 'naraya-coba-sales.example.com')
+            .replace('naraya-staf.example.com', 'naraya-coba-staf.example.com')
+            .replace('"Naraya Sales"', '"Naraya Coba"')
+    }
+}
+preBuild.dependsOn cobaConfig

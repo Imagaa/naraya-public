@@ -1,0 +1,27 @@
+metadata_dir = "/var/lib/garage/meta"
+data_dir = "/var/lib/garage/data"
+db_engine = "sqlite"
+replication_factor = 1
+
+rpc_bind_addr = "[::]:3901"
+rpc_public_addr = "127.0.0.1:3901"
+# rpc_secret intentionally not set here — provided via the GARAGE_RPC_SECRET
+# env var at runtime (Garage supports this natively) so it never lands in git.
+
+[s3_api]
+s3_region = "garage"
+api_bind_addr = "[::]:3900"
+root_domain = ".s3.naraya.example.com"
+
+[s3_web]
+bind_addr = "[::]:3902"
+root_domain = ".example.com"
+# Cloudflare's free SSL only covers one subdomain level (*.example.com), so
+# the public hostname is "naraya-media.example.com" (single-level), not
+# nested under naraya.example.com. Cloudflare Tunnel forwards the original
+# Host header, so stripping root_domain leaves "naraya-media", which must
+# match a bucket alias.
+index = "index.html"
+
+[admin]
+api_bind_addr = "[::]:3903"

@@ -1,0 +1,13 @@
+# Storefront photos (seed data)
+
+Freely licensed photos from Wikimedia Commons, used as demo buyers' storefront photos. Resized to 800px wide.
+
+| File | Original | Author | Licence | Source |
+|---|---|---|---|---|
+| 1.jpg | Warung Kelontong.jpg | SATELITBM | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Warung_Kelontong.jpg |
+| 2.jpg | Warung - Kuta (Indonesia).JPG | Robert Nagel | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Warung_-_Kuta_(Indonesia).JPG |
+| 3.jpg | Warung Kopi.jpg | Bennylin | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Warung_Kopi.jpg |
+| 4.jpg | Warung Angkringan.jpg | SATELITBM | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Warung_Angkringan.jpg |
+| 5.jpg | Warung Bakso Adi di Kebumen.jpg | Rafidaslam | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Warung_Bakso_Adi_di_Kebumen.jpg |
+| 6.jpg | Ubrug, Warung Kiara, Sukabumi, West Java, Indonesia - panoramio.jpg | kasman70 | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Ubrug,_Warung_Kiara,_Sukabumi,_West_Java,_Indonesia_-_panoramio.jpg |
+| 7.jpg | Warung martabak.JPG | Lord Mountbatten | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Warung_martabak.JPG |

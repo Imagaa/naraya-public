@@ -1,0 +1,466 @@
+/* Organic — design-system tokens and component classes, ported from the
+   design mockup. Token values below are
+   Naraya's actual palette (overridden from the template defaults); the
+   component rules further down reference these variables only — retune
+   the look by editing this :root block, not the rules below it.
+   Note: the Archivo font @import lives in app.css, not here — CSS requires
+   @import to precede all other rules, and this file gets @import-ed itself. */
+
+:root {
+  --color-bg: #FFFFFF;
+  --color-surface: #FCEEC0;
+  --color-text: #271E02;
+  --color-accent: #F0B90B;
+  --color-accent-2: #A8863F;
+  --color-divider: color-mix(in srgb, #271E02 14%, transparent);
+
+  /* Tonal ramps — generated in OKLCH on one shared lightness scale, so the
+     same step of any role matches the others in visual value. */
+  --color-neutral-100: #FBF8F0;
+  --color-neutral-200: #F4EEDD;
+  --color-neutral-300: #E4D9BE;
+  --color-neutral-400: #C2B48F;
+  --color-neutral-500: #9C8C67;
+  --color-neutral-600: #786A49;
+  --color-neutral-700: #574A30;
+  --color-neutral-800: #3A3018;
+  --color-neutral-900: #271E02;
+
+  --color-accent-100: #FFF8E1;
+  --color-accent-200: #FDEDBB;
+  --color-accent-300: #FBDE87;
+  --color-accent-400: #F5C93A;
+  --color-accent-500: #F0B90B;
+  --color-accent-600: #D1A008;
+  --color-accent-700: #A87F07;
+  --color-accent-800: #7A5B05;
+  --color-accent-900: #4D3903;
+
+  --color-accent-2-100: #F7F1E4;
+  --color-accent-2-200: #EDE2C8;
+  --color-accent-2-300: #DCC896;
+  --color-accent-2-400: #C4A968;
+  --color-accent-2-500: #A8863F;
+  --color-accent-2-600: #866A2F;
+  --color-accent-2-700: #654F23;
+  --color-accent-2-800: #453515;
+  --color-accent-2-900: #291F0C;
+
+  --color-success: #7A8A5E;
+  --color-success-bg: #EEF1E7;
+  --color-danger: #C1603A;
+  --color-danger-bg: #FBEAE2;
+
+  --font-heading: 'Archivo', system-ui, sans-serif;
+  --font-heading-weight: 800;
+  --font-body: 'Archivo', system-ui, sans-serif;
+
+  --space-1: 4.4px;
+  --space-2: 8.8px;
+  --space-3: 13.2px;
+  --space-4: 17.6px;
+  --space-6: 26.4px;
+  --space-8: 35.2px;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+
+  /* Elevation — soft ink-tinted shadows, matching the mockup's overrides. */
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #271E02 14%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #271E02 16%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #271E02 22%, transparent);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--font-heading-weight); }
+
+.washed{filter:saturate(0.6) contrast(0.85) brightness(1.1) opacity(0.94)}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Components — built with the tokens above. Plain CSS
+   on plain HTML: no JavaScript, no build step. Each class is described
+   next to its rules.
+   ══════════════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-size: 15px; line-height: 1.55; font-weight: 400; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 var(--space-2);
+}
+h1 { font-size: 42px; }
+h2 { font-size: 32px; }
+h3 { font-size: 25px; }
+h4 { font-size: 20px; }
+h5 { font-size: 16px; }
+h6 { font-size: 13px; }
+h6 { letter-spacing: 0.08em; text-transform: uppercase; }
+p { margin: 0 0 var(--space-3); }
+a { color: var(--color-accent); text-underline-offset: 3px; text-decoration: none; }
+img { display: block; max-width: 100%; }
+figure { margin: 0; }
+figcaption {
+  font-size: 11px; margin-top: var(--space-1);
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+}
+.text-muted { color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+.text-danger { color: var(--color-danger); }
+.text-warning { color: var(--color-accent-700); }
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
+
+/* — rules — */
+.hr {
+  height: 1px; border: 0; margin: var(--space-4) 0;
+  background: var(--color-divider);
+}
+
+/* — buttons — */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  cursor: pointer; text-decoration: none;
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 14px; line-height: 1.2; color: var(--color-text); /* matches the .input's 14px —
+     the pair sits side by side in sign-up rows */
+  background: transparent; border: 1px solid transparent;
+  padding: var(--space-2) calc(var(--space-3) * 1.2);
+  border-radius: var(--radius-md);
+}
+.btn svg { display: block; }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary { background: var(--color-accent); color: var(--color-bg); }
+.btn-primary:hover { background: var(--color-accent-600); }
+.btn-primary:active { background: var(--color-accent-700); }
+.btn-secondary { border-color: var(--color-divider); }
+.btn-secondary:hover { background: color-mix(in srgb, var(--color-text) 7%, transparent); }
+.btn-secondary:active { background: color-mix(in srgb, var(--color-text) 14%, transparent); }
+.btn-ghost { color: var(--color-accent); padding-inline: var(--space-1); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--color-accent) 10%, transparent); }
+.btn-ghost:active { background: color-mix(in srgb, var(--color-accent) 18%, transparent); }
+.btn-danger { background: var(--color-danger); color: var(--color-bg); }
+.btn-danger:hover { background: color-mix(in srgb, var(--color-danger) 85%, black); }
+.btn-danger:active { background: color-mix(in srgb, var(--color-danger) 70%, black); }
+.btn-icon { width: 36px; height: 36px; padding: 0; }
+.btn-block { width: 100%; margin-top: var(--space-2); }
+
+/* — forms — */
+.field > label {
+  display: block; font-size: 12px; margin-bottom: 5px;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+}
+.input {
+  width: 100%; min-height: 36px; padding: 6px 10px; font: inherit;
+  font-size: 14px; color: var(--color-text); caret-color: var(--color-accent);
+  background: var(--color-surface);
+  border: 1px solid var(--color-divider); border-radius: var(--radius-md);
+}
+.input:hover { border-color: color-mix(in srgb, var(--color-text) 45%, transparent); }
+.input:focus-visible { border-color: var(--color-accent); outline-offset: 0; }
+textarea.input { min-height: 90px; resize: vertical; }
+select.input {
+  appearance: none; -webkit-appearance: none;
+  padding-right: 34px; cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23271E02' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 8px center; background-size: 18px;
+}
+.radio { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; }
+.radio input, .seg-opt input {
+  position: absolute; opacity: 0; width: 0; height: 0; pointer-events: none;
+}
+.radio .dot {
+  width: 16px; height: 16px; flex: none; border-radius: 50%;
+  border: 1.5px solid var(--color-divider);
+}
+.radio:hover .dot { border-color: var(--color-accent); }
+.radio input:checked + .dot {
+  border-color: var(--color-accent); background: var(--color-accent);
+  box-shadow: inset 0 0 0 4px var(--color-bg);
+}
+.radio input:focus-visible + .dot { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+
+/* — cards — */
+.card {
+  display: flex; flex-direction: column; gap: var(--space-2);
+  padding: var(--space-3); border-radius: var(--radius-md); background: var(--color-surface);
+}
+.card-kicker { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); }
+.card-title {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 17px; line-height: 1.2;
+}
+.card-body { margin: 0; font-size: 13px; opacity: 0.8; flex: 1; }
+.card-meta {
+  display: flex; align-items: center; gap: 6px; font-size: 11px;
+  color: color-mix(in srgb, var(--color-text) 50%, transparent);
+}
+.elev-sm { box-shadow: var(--shadow-sm); }
+.elev-md { box-shadow: var(--shadow-md); }
+.elev-lg { box-shadow: var(--shadow-lg); }
+
+/* — emboss + motion: cards get a layered shadow and lift slightly on
+   hover so the flat design-system palette doesn't read as static/plain. — */
+.card.elev-sm, .card.elev-md, .card.elev-lg {
+  box-shadow: 0 1px 2px rgba(0,0,0,.05), 0 6px 16px -8px rgba(0,0,0,.18);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card.elev-sm:hover, .card.elev-md:hover, .card.elev-lg:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 6px rgba(0,0,0,.07), 0 16px 28px -12px rgba(0,0,0,.22);
+}
+.btn { transition: transform .12s ease, background-color .15s ease; }
+.btn:active { transform: scale(0.96); }
+
+@keyframes mp-fade-in-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+[x-cloak] { display: none !important; }
+
+/* — category filter chips (admin product and order lists) — */
+.mp-cat-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 28px; }
+.mp-cat-chip { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; border: 1px solid var(--color-divider); background: #fff; font-size: 13.5px; color: inherit; cursor: pointer; transition: background-color .15s ease, border-color .15s ease; }
+.mp-cat-chip:hover { background: color-mix(in srgb, var(--color-text) 5%, transparent); }
+.mp-cat-chip.is-active { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+
+/* — tags — */
+.tag {
+  display: inline-flex; align-items: center; font-size: 11px;
+  letter-spacing: 0.02em; padding: 3px 10px;
+  border-radius: calc(var(--radius-md) * 0.75);
+}
+.tag-accent { background: var(--color-accent-100); color: var(--color-accent-800); }
+.tag-accent-2 { background: var(--color-accent-2-100); color: var(--color-accent-2-800); }
+.tag-neutral { background: var(--color-neutral-100); color: var(--color-neutral-800); }
+.tag-outline { border: 1px solid var(--color-accent); color: var(--color-accent); }
+.tag-success { background: var(--color-success-bg); color: var(--color-success); }
+.tag-danger { background: var(--color-danger-bg); color: var(--color-danger); }
+
+/* — navigation — */
+.nav {
+  display: flex; align-items: center; gap: var(--space-1);
+  padding: var(--space-2) calc(var(--space-4) - 16px);
+  border-bottom: none;
+}
+.nav-brand {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 18px; margin-right: auto;
+}
+.nav a {
+  color: var(--color-text); font-size: 14px;
+  padding: 8px 16px; border-radius: 999px;
+}
+.nav a:hover { background: color-mix(in srgb, var(--color-text) 6%, transparent); }
+.nav a[aria-current='page'] {
+  background: var(--color-accent-100); color: var(--color-accent-800); font-weight: 700;
+}
+
+/* — tables — */
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th {
+  text-align: left; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-text) 60%, transparent);
+  padding: var(--space-2); border-bottom: 1px solid var(--color-divider);
+}
+.table td {
+  padding: var(--space-2);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+}
+.table tbody tr:hover { background: color-mix(in srgb, var(--color-text) 4%, transparent); }
+
+/* — dialog — */
+.dialog-backdrop {
+  position: fixed; inset: 0; display: grid; place-items: center;
+  padding: var(--space-4);
+  background: color-mix(in srgb, var(--color-neutral-900) 50%, transparent);
+}
+.dialog {
+  width: min(440px, 100%); display: flex; flex-direction: column; gap: var(--space-3);
+  padding: var(--space-4); border-radius: var(--radius-lg);
+  background: var(--color-surface); box-shadow: var(--shadow-lg);
+}
+.dialog-title {
+  font-family: var(--font-heading); font-weight: var(--font-heading-weight);
+  font-size: 20px;
+}
+.dialog-body { font-size: 14px; opacity: 0.85; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: var(--space-2); margin-top: var(--space-2); }
+
+/* — rounded frame: everything softens, small controls go pill — */
+.card, .dialog { border-radius: calc(var(--radius-lg) * 1.15); }
+.btn, .tag, .seg, .input { border-radius: 999px; }
+.input { padding-inline: 14px; }
+
+/* border + stronger shadow so this stays visible whether it sits over a
+   photo (any color) or the white info panel — a plain white circle with
+   only a soft shadow disappeared against the info panel's white
+   background on desktop (the row/photo-left layout puts the close button
+   over the info side there; mobile stacks photo on top instead, which is
+   why this only showed up on desktop). */
+
+@media (max-width: 640px) {
+  .mp-cat-chips { padding: 0 18px; }
+}
+
+/* ---- Admin charts (Laporan) ---- */
+.admin-chart-wrap { position: relative; height: 240px; }
+.admin-chart-wrap--lg { height: 340px; }
+.admin-charts-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.admin-chart-card-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
+
+.admin-period-toggle { display: flex; border: 1px solid var(--color-divider); border-radius: var(--radius-sm); overflow: hidden; }
+.admin-period-toggle button {
+  border: 0; background: none; padding: 6px 12px; font-size: 12.5px; color: var(--color-text); cursor: pointer;
+}
+.admin-period-toggle button + button { border-left: 1px solid var(--color-divider); }
+.admin-period-toggle button.is-active { background: var(--color-accent); color: var(--color-bg); }
+
+.admin-chart-controls { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.admin-chart-range { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.admin-chart-daterange { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.admin-chart-daterange .input { width: auto; min-width: 0; flex: 1 1 130px; min-height: 32px; padding: 4px 8px; font-size: 12.5px; }
+
+.admin-pipeline { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; padding: 8px 0; }
+.admin-pipeline-stage { flex: 1; min-width: 110px; text-align: center; }
+.admin-pipeline-count { font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 26px; }
+.admin-pipeline-label { font-size: 13px; margin-top: 2px; }
+.admin-pipeline-percent { font-size: 12px; color: color-mix(in srgb, var(--color-text) 50%, transparent); }
+.admin-pipeline-arrow { flex: none; font-size: 18px; color: color-mix(in srgb, var(--color-text) 30%, transparent); }
+
+@media (max-width: 900px) {
+  .admin-charts-row { grid-template-columns: 1fr; }
+  .admin-pipeline { justify-content: flex-start; }
+  .admin-pipeline-arrow { display: none; }
+  .admin-pipeline-stage { min-width: 45%; text-align: left; }
+}
+
+/* ---- Admin shell ---- */
+.admin-shell { display: flex; height: 100vh; background: var(--color-neutral-100); }
+
+.admin-sidebar {
+  width: 248px; flex: none; background: var(--color-neutral-900); color: var(--color-neutral-100);
+  display: flex; flex-direction: column; padding: 20px 0;
+  height: 100vh; overflow-y: auto;
+}
+.admin-sidebar-brand {
+  font-family: var(--font-heading); font-weight: 800; font-size: 20px; color: #fff;
+  padding: 0 22px 20px;
+}
+.admin-nav-group { margin-bottom: 18px; }
+.admin-nav-group-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+  color: color-mix(in srgb, var(--color-neutral-100) 45%, transparent);
+  padding: 0 22px 6px;
+}
+.admin-nav-link {
+  display: flex; align-items: center; gap: 12px; padding: 10px 22px; font-size: 14px;
+  color: color-mix(in srgb, var(--color-neutral-100) 80%, transparent);
+  border-left: 3px solid transparent; transition: background-color .15s ease, color .15s ease;
+}
+.admin-nav-link:hover { background: color-mix(in srgb, #fff 6%, transparent); color: #fff; }
+.admin-nav-link.is-active {
+  background: color-mix(in srgb, #fff 10%, transparent); color: #fff;
+  border-left-color: var(--color-accent);
+}
+.admin-nav-link svg { flex: none; opacity: .9; }
+
+.admin-main { flex: 1; min-width: 0; height: 100vh; display: flex; flex-direction: column; }
+.admin-topbar {
+  height: 64px; flex: none; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 24px; background: var(--color-bg); border-bottom: 1px solid var(--color-divider);
+}
+.admin-topbar-user { display: flex; align-items: center; gap: 16px; font-size: 14px; }
+.admin-menu-toggle { display: none; background: none; border: 0; padding: 4px; color: var(--color-text); cursor: pointer; }
+.admin-content { padding: 24px; flex: 1; min-height: 0; overflow-y: auto; }
+
+.admin-sidebar-backdrop {
+  display: none; position: fixed; inset: 0; background: color-mix(in srgb, #000 45%, transparent); z-index: 40;
+}
+
+@media (max-width: 900px) {
+  .admin-sidebar {
+    position: fixed; inset: 0 auto 0 0; z-index: 50; transform: translateX(-100%);
+    transition: transform .2s ease; box-shadow: var(--shadow-lg);
+  }
+  .admin-sidebar.is-open { transform: translateX(0); }
+  .admin-sidebar-backdrop.is-open { display: block; }
+  .admin-menu-toggle { display: block; }
+  .admin-content { padding: 16px; }
+}
+
+/* The base .card/.input/.dialog fill (--color-surface) is a warm cream
+   tint that fits the marketplace's brand look but reads as an odd yellow
+   box in the admin workspace's neutral theme — swap it for a plain white
+   fill. No border: a soft shadow alone reads as more modern and lighter
+   than a bordered box, and avoids stacking border+shadow+divider lines
+   on the same card. Scoped to .admin-content so marketplace and Sales
+   (which don't use this shell) are untouched; Gudang shares this shell
+   by design, so it picks up the same neutral treatment. */
+.admin-content .card {
+  background: var(--color-bg);
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--color-neutral-900) 5%, transparent), 0 8px 20px -12px color-mix(in srgb, var(--color-neutral-900) 18%, transparent);
+}
+.admin-content .input,
+.admin-content .dialog {
+  background: var(--color-bg);
+}
+
+.admin-pagination { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.admin-pagination .btn { min-width: 36px; padding: 6px 10px; }
+.admin-pagination-disabled { opacity: .4; cursor: default; }
+.admin-pagination-ellipsis { padding: 6px 4px; color: color-mix(in srgb, var(--color-text) 45%, transparent); }
+
+.admin-currency-input { position: relative; }
+.admin-currency-prefix {
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  font-size: 14px; color: color-mix(in srgb, var(--color-text) 55%, transparent); pointer-events: none;
+}
+
+.admin-size-input { display: flex; gap: 8px; }
+.admin-size-input .input { flex: 1; }
+.admin-size-input select.input { flex: none; width: 100px; }
+
+.admin-category-picker { display: flex; gap: 8px; align-items: flex-end; }
+.admin-category-picker .field { flex: 1; }
+
+.admin-swatch-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.admin-swatch {
+  width: 26px; height: 26px; border-radius: 50%; flex: none; cursor: pointer;
+  border: 2px solid transparent; box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-text) 12%, transparent);
+  transition: transform .1s ease;
+}
+.admin-swatch:hover { transform: scale(1.1); }
+.admin-swatch.is-active { border-color: var(--color-bg); box-shadow: 0 0 0 2px var(--color-text); }
+
+.admin-icon-grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 6px; max-height: 168px; overflow-y: auto; }
+.admin-icon-option {
+  width: 34px; height: 34px; border-radius: var(--radius-sm); border: 1px solid var(--color-divider);
+  background: var(--color-bg); display: flex; align-items: center; justify-content: center; cursor: pointer;
+  color: var(--color-text); transition: background-color .1s ease;
+}
+.admin-icon-option:hover { background: var(--color-neutral-100); }
+.admin-icon-option.is-active { background: var(--color-accent); color: var(--color-bg); border-color: var(--color-accent); }
+
+/* Leaflet requires an explicit, non-zero height on its container at init time — a 0-height div is the #1 cause of "map doesn't render". */
+.pinpoint-map, .route-map { width: 100%; height: 320px; border-radius: var(--radius-md); border: 1px solid var(--color-divider); }
+
+/* — sales app: unlike the marketplace's mobile layout, this is mobile-only
+   full stop, not a breakpoint-toggled variant of a desktop layout — so
+   these are unconditional, not gated behind a @media query the way
+   .mp-m-bottom-nav-* is. Same visual language (floating pill bar). */
+.sales-body { padding-bottom: 100px; background: var(--color-neutral-100); min-height: 100vh; }
+.sales-topbar { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; background: #fff; border-bottom: 1px solid var(--color-divider); }
+.sales-bottom-nav { position: fixed; left: 16px; right: 16px; bottom: 18px; z-index: 40; }
+.sales-bottom-nav-bar { background: #fff; border-radius: 999px; box-shadow: var(--shadow-lg); display: flex; align-items: center; padding: 0 6px; height: 64px; }
+.sales-bottom-nav-bar a { flex: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; color: var(--color-neutral-500); font-size: 9.5px; }
+.sales-bottom-nav-bar a.is-active { color: var(--color-accent-700); }
+.sales-bottom-nav-icon { position: relative; width: 40px; height: 40px; border-radius: 999px; display: flex; align-items: center; justify-content: center; }
+.sales-bottom-nav-bar a.is-active .sales-bottom-nav-icon { background: var(--color-accent); color: #fff; }
+.nav-badge { position: absolute; top: 0; right: 2px; min-width: 16px; height: 16px; padding: 0 4px; border-radius: 999px; background: var(--color-danger); color: #fff; font-size: 10px; line-height: 16px; text-align: center; font-weight: 700; }
+

@@ -1,0 +1,26 @@
+{
+  "appId": "id.naraya.sales",
+  "appName": "Naraya Sales",
+  "webDir": "www",
+  "server": {
+    "url": "https://naraya-sales.example.com",
+    "androidScheme": "https",
+    "errorPath": "index.html",
+    "allowNavigation": [
+      "naraya-sales.example.com",
+      "naraya-staf.example.com"
+    ]
+  },
+  "android": {
+    "allowMixedContent": false,
+    "adjustMarginsForEdgeToEdge": "force"
+  },
+  "plugins": {
+    "PushNotifications": {
+      "presentationOptions": [
+        "sound",
+        "alert"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+server {
+    listen ${PORT};
+    server_name _;
+    root /var/www/html/public;
+    index index.php;
+
+    # Above Livewire's 12 MB temporary upload (nginx's default 1 MB rejected phone photos with 413).
+    client_max_body_size 20m;
+
+    # Docker Compose's embedded DNS (127.0.0.11) resolves the "app" service
+    # name; forcing per-request resolution (like the Railway template does
+    # for its own private networking) costs nothing here but keeps this
+    # config correct even if the app container is ever recreated with a new
+    # internal IP without an nginx restart.
+    resolver 127.0.0.11 valid=5s;
+    set $app_upstream ${PHP_HOST}:9000; # "app" on production, "coba" on the sandbox (docker-compose.sandbox.yml)
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    # The sales PWA's update path: the CDN (Cloudflare) cached these for 4 h,
+    # so a new service worker reached phones hours late. Always revalidate.
+    location ~ ^/(service-worker\.js|manifest\.json|admin-sw\.js|admin-manifest\.json)$ {
+        add_header Cache-Control "no-cache" always;
+        try_files $uri =404;
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass $app_upstream;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_read_timeout 300s;
+        # During a deploy "app" resolves to the old and the new container; a refused connection (the old one just
+        # stopped) is retried on the other instead of reaching the visitor (deploy.sh).
+        fastcgi_next_upstream error timeout;
+        # a container that just went away doesn't refuse, it vanishes: fail fast (local network, <1 ms normally) and retry
+        fastcgi_connect_timeout 1s;
+    }
+
+    location ~ /\.(?!well-known).* {
+        deny all;
+    }
+}

@@ -1,0 +1,54 @@
+/* Native form controls in the marketplace look. x-ui.input emits
+   .field > label + input.input; select, textarea, radio and checkbox are
+   plain HTML restyled here so behavior stays the browser's own. */
+
+.field { display: grid; gap: 6px; min-width: 0; }
+.field > label, .field-label { font-size: 13px; font-weight: 600; }
+.field .hint { font-size: 12px; color: var(--muted); }
+.field .input, .field select, .field textarea, textarea.input { width: 100%; height: 46px; padding: 0 14px; border: 1.5px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); font: inherit; outline: none; transition: border-color .15s ease; }
+.field textarea, textarea.input { height: auto; min-height: 112px; padding: 12px 14px; resize: vertical; line-height: 1.5; }
+.field .input:focus, .field select:focus, .field textarea:focus, textarea.input:focus { border-color: var(--ink); }
+.form-error { font-size: 12.5px; color: var(--sale); }
+.form-row { display: grid; gap: 12px; }
+.form-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.form-actions .btn-primary { flex: 1; }
+
+/* input with a leading icon (login) */
+.control { display: flex; align-items: center; gap: 10px; height: 46px; padding: 0 14px; border: 1.5px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--muted); transition: border-color .15s ease; }
+.control:focus-within { border-color: var(--ink); }
+.control .ico { width: 16px; height: 16px; }
+.control input { flex: 1; min-width: 0; height: 100%; border: 0; outline: none; background: none; color: var(--ink); font: inherit; }
+.pw-toggle { border: 0; background: none; padding: 4px; color: var(--muted); display: grid; }
+.remember { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.remember input, .check input { width: 18px; height: 18px; accent-color: var(--ink); margin: 0; }
+
+/* whole-card radio */
+.opts { display: grid; gap: 10px; }
+.opt { display: grid; grid-template-columns: 40px minmax(0, 1fr) 22px; gap: 12px; align-items: center; padding: 12px 14px; border: 1.5px solid var(--line); border-radius: var(--r-md); cursor: pointer; background: var(--surface); transition: border-color .15s ease, background-color .15s ease; }
+.opt:hover { border-color: var(--line-2); }
+.opt:has(input:checked) { border-color: var(--ink); background: color-mix(in srgb, var(--brand-soft) 55%, var(--surface)); }
+.opt:has(input:focus-visible) { outline: 2px solid var(--ink); outline-offset: 2px; }
+.opt input { appearance: none; width: 20px; height: 20px; margin: 0; border-radius: 50%; border: 2px solid var(--line-2); display: grid; place-items: center; }
+.opt input:checked { border-color: var(--ink); }
+.opt input:checked::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--ink); }
+.opt-title { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-weight: 600; font-size: 14px; }
+.opt-desc { font-size: 13px; color: var(--muted); }
+
+/* photo drop zone: a label wrapping the native file input */
+
+/* native dialog */
+dialog.dlg { border: 0; border-radius: var(--r-lg); padding: 0; width: min(420px, calc(100vw - 32px)); box-shadow: var(--sh-3); color: var(--ink); background: var(--surface); }
+dialog.dlg::backdrop { background: rgba(22, 24, 29, .55); }
+.dlg-body { display: grid; gap: 14px; padding: 22px; }
+.dlg-body h2 { font-size: 20px; }
+.dlg-body .tile { width: 48px; height: 48px; }
+.dlg-body p { color: var(--muted); }
+.dlg-actions { display: flex; gap: 10px; }
+.dlg-actions .btn { flex: 1; }
+
+/* map picker (Leaflet) */
+.pinpoint-map, .route-map { width: 100%; height: 300px; border-radius: var(--r-md); border: 1px solid var(--line); }
+
+@media (min-width: 640px) {
+  .form-row.cols-2 { grid-template-columns: 1fr 1fr; }
+}

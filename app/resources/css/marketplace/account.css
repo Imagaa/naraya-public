@@ -1,0 +1,56 @@
+/* Account: store card, menu list (tabs are buttons, pages are links)
+   and address cards. The menu sits left of the active panel from 1024px. */
+
+.me { gap: 16px; }
+.me-top { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 14px; align-items: center; }
+.me-av { width: 56px; height: 56px; border-radius: 16px; background: var(--brand); color: var(--ink); display: grid; place-items: center; font: 800 22px var(--f-display); }
+.me-top h1 { font-size: 20px; }
+.me-top p { font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+
+.menu { display: grid; list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
+.menu li + li { border-top: 1px solid var(--line); }
+.menu form { margin: 0; }
+.menu a, .menu button { width: 100%; display: grid; grid-template-columns: 36px minmax(0, 1fr) auto 16px; gap: 12px; align-items: center; padding: 12px 14px; border: 0; background: none; text-align: left; font: inherit; color: inherit; }
+.menu a:hover, .menu button:hover { background: var(--canvas); }
+.menu [aria-current="page"] { background: var(--brand-soft); }
+.menu .tile { width: 36px; height: 36px; border-radius: 10px; background: var(--canvas); }
+.menu [aria-current="page"] .tile { background: var(--brand); }
+.menu b { font-weight: 600; font-size: 14px; }
+.menu small { display: block; font-size: 12px; color: var(--muted); }
+.menu em { font-style: normal; font-size: 12px; font-weight: 600; color: var(--muted); }
+.menu .chev { color: var(--muted); }
+.menu .out b, .menu .out .tile { color: var(--sale); }
+
+.addr-cards { display: grid; gap: 10px; }
+.addr-card { display: grid; gap: 10px; padding: 14px; border: 1.5px solid var(--line); border-radius: var(--r-md); }
+.addr-card.main { border-color: var(--ink); }
+.pin-note { display: flex; align-items: center; gap: 4px; margin-top: 4px; font-size: 12px; color: var(--muted); }
+.addr-actions { display: flex; flex-wrap: wrap; gap: 4px; padding-top: 10px; border-top: 1px solid var(--line); }
+.addr-actions .danger { color: var(--sale); }
+.addr-actions .danger:hover { background: var(--sale-soft); }
+
+@media (min-width: 1024px) {
+  .two.acct { grid-template-columns: 340px minmax(0, 1fr); }
+  .two.acct > aside { position: static; }
+  .addr-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .addr-cards .empty, .addr-cards .addr-new { grid-column: 1 / -1; }
+}
+
+/* Onboarding gate pages (new password, store data, account status): one centred card. */
+.onboard { max-width: 560px; }
+.onboard-card { gap: 14px; }
+.onboard-card h1 { font-size: 22px; }
+.onboard-card p { color: var(--ink-2); }
+.me-photo { object-fit: cover; background: var(--canvas); }
+
+/* Master/detail on phones: /akun shows the card + menu, /akun/{section} shows only that
+   section (with the task bar's back link). From 1024px both columns show side by side. */
+.two.acct:not(.is-detail) > .acct-panels { display: none; }
+.two.acct.is-detail > aside { display: none; }
+.menu [aria-current="page"], .menu [aria-current="page"] .tile { background: none; }
+.menu [aria-current="page"] .tile { background: var(--canvas); }
+@media (min-width: 1024px) {
+  .two.acct:not(.is-detail) > .acct-panels, .two.acct.is-detail > aside { display: grid; }
+  .menu [aria-current="page"] { background: var(--brand-soft); }
+  .menu [aria-current="page"] .tile { background: var(--brand); }
+}

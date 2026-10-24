@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;700;900&display=swap');
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* Organic design system is the source of truth for colors/typography/components.
+   Tailwind above is layout-utility-only (flex, grid, responsive breakpoints) —
+   its preflight/base reset is intentionally excluded so it never fights the
+   design system's own reset and component classes (.btn, .card, .tag, ...). */
+@import './design-system.css';
+
+
+/* Count badge on an admin sidebar link (e.g. registrations awaiting approval). */
+.admin-nav-badge { margin-left: auto; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--color-danger); color: #fff; font-size: 11px; font-weight: 700; line-height: 20px; text-align: center; }
+
+/* x-ui.field-error */
+.field-error { color: var(--color-danger); font-size: 12px; }

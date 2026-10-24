@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- The sandbox app's name (flavor "coba", android/app/build.gradle); everything else comes from main/. -->
+<resources>
+    <string name="app_name">Naraya Coba</string>
+    <string name="title_activity_main">Naraya Coba</string>
+</resources>

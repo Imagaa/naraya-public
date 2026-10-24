@@ -1,0 +1,23 @@
+.list-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; padding-top: 20px; }
+.list-head h1 { font-size: 24px; }
+.cat-chips { display: flex; gap: 8px; margin: 14px 0; padding-bottom: 4px; }
+.cat-chip { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--line); border-radius: 99px; background: var(--surface); font-size: 13px; font-weight: 500; white-space: nowrap; }
+.cat-chip .ico { width: 15px; height: 15px; color: var(--c, var(--ink-2)); }
+.cat-chip:hover { border-color: var(--line-2); }
+.cat-chip.is-active { background: var(--ink); border-color: var(--ink); color: #fff; }
+.cat-chip.is-active .ico { color: #fff; }
+.active-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.filter-chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 0; border-radius: 99px; background: var(--brand-soft); font-size: 13px; font-weight: 600; }
+.filter-chip .ico { width: 14px; height: 14px; }
+
+@media (min-width: 1024px) {
+  .list-head { padding-top: 28px; }
+  .list-head h1 { font-size: 30px; }
+}
+
+/* Sort + availability row above the grid. */
+.list-tools { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 4px 0 14px; }
+.list-sort { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-2); }
+.list-sort select { height: 40px; padding: 0 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); font: inherit; }
+.list-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; font-size: 13px; font-weight: 500; }
+.list-toggle input { width: 18px; height: 18px; accent-color: var(--ink); }

@@ -1,0 +1,62 @@
+/* hero — the page's one bold moment */
+/* Fixed height so every slide is the same size; long names clamp instead of growing the box. */
+.hero { position: relative; display: grid; grid-template-rows: minmax(0, 1fr) auto; margin-top: 16px; height: 260px; padding: 22px 20px 18px; border-radius: var(--r-lg); background: var(--night); color: #fff; overflow: hidden; }
+.hero::before { content: ""; position: absolute; width: 340px; height: 340px; right: -170px; top: -150px; border-radius: 50%; border: 56px solid var(--brand); pointer-events: none; }
+.hero-slide { position: relative; grid-area: 1 / 1; display: grid; gap: 20px; align-items: center; min-height: 0; overflow: hidden; color: inherit; }
+.hero-copy { display: grid; gap: 10px; max-width: 36rem; align-content: start; }
+.eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--brand); }
+.hero h1 { font-size: 22px; line-height: 1.12; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+.hero h1 em { font-style: normal; color: var(--brand); }
+.hero p { color: var(--night-text); display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.hero-price s { color: var(--night-text); }
+.hero-price strong { color: #fff; font-size: 18px; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.hero-photo, .hero .hero-sub { display: none; }
+.dots { position: relative; align-self: end; display: flex; gap: 6px; margin-top: 14px; }
+.dots button { width: 18px; height: 4px; padding: 0; border: 0; border-radius: 4px; background: rgba(255, 255, 255, .25); }
+.dots button.on { width: 28px; background: var(--brand); }
+
+/* The copy sits above the decorative ring and never runs under it on phones. */
+/* On phones the ring is smaller and tucked into the corner so it never covers the copy. */
+.hero::before { width: 200px; height: 200px; right: -110px; top: -110px; border-width: 36px; }
+.hero-copy { position: relative; z-index: 1; }
+.clamp-2 { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+
+/* Trust strip: one compact row (scrolls sideways on phones) instead of four large cards. */
+.trust-strip { display: flex; gap: 8px; margin: 12px 0 0; padding-bottom: 16px; }
+.trust-strip span { flex: none; display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 99px; background: var(--surface); border: 1px solid var(--line); font-size: 13px; white-space: nowrap; }
+.trust-strip .ico { width: 16px; height: 16px; color: var(--ink-2); }
+.trust-strip b { font-weight: 600; }
+
+/* Active order row: the buyer's current delivery at a glance. */
+.active-order { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: var(--r-md); background: var(--brand-soft); color: var(--ink); }
+.active-order .tile { width: 40px; height: 40px; flex: none; display: grid; place-items: center; border-radius: 10px; background: var(--brand); }
+.active-order-text { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.active-order-text b { font-weight: 600; font-size: 14px; }
+.active-order-text small { font-size: 12px; color: var(--ink-2); }
+.active-order .chev { flex: none; width: 18px; height: 18px; }
+
+/* Category chips: sideways scroll on phones, wrapping from 1024px. */
+.cat-chips-home { display: flex; gap: 8px; padding-bottom: 2px; }
+.cat-chips-home .cat-chip { flex: none; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 8px 14px; border-radius: 99px; border: 1px solid var(--line); background: var(--surface); font-size: 14px; font-weight: 500; white-space: nowrap; }
+.cat-chips-home .cat-chip .ico { width: 18px; height: 18px; color: var(--c); }
+.cat-chips-home .cat-chip:hover { border-color: var(--line-2); }
+
+.explore-more { display: grid; justify-items: center; margin-top: 18px; }
+
+@media (min-width: 640px) {
+  .hero { margin-top: 20px; height: 280px; padding: 30px 32px 22px; }
+  .hero h1 { font-size: 30px; -webkit-line-clamp: 2; }
+  .hero .hero-sub { display: -webkit-box; }
+  .hero::before { width: 340px; height: 340px; right: -170px; top: -150px; border-width: 56px; }
+}
+
+@media (min-width: 1024px) {
+  .hero { margin-top: 24px; height: 300px; padding: 32px 48px 22px; }
+  .hero h1 { font-size: 36px; }
+  .hero-slide { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+  .hero-photo { display: block; justify-self: end; width: min(100%, 210px); aspect-ratio: 1; object-fit: cover; border-radius: var(--r-lg); box-shadow: var(--sh-3); }
+  .trust-strip { display: grid; grid-template-columns: repeat(4, 1fr); overflow: visible; }
+  .trust-strip span { justify-content: center; }
+  .cat-chips-home { flex-wrap: wrap; overflow: visible; }
+}

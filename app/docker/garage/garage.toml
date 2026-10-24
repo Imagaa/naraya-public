@@ -1,0 +1,26 @@
+metadata_dir = "/var/lib/garage/meta"
+data_dir = "/var/lib/garage/data"
+db_engine = "sqlite"
+replication_factor = 1
+
+rpc_bind_addr = "[::]:3901"
+rpc_public_addr = "127.0.0.1:3901"
+# rpc_secret intentionally not set here — provided via the GARAGE_RPC_SECRET
+# env var at runtime (Garage supports this natively) so it never lands in git.
+
+[s3_api]
+s3_region = "garage"
+api_bind_addr = "[::]:3900"
+root_domain = ".s3.naraya.test"
+
+[s3_web]
+bind_addr = "[::]:3902"
+root_domain = ".127.0.0.1.nip.io"
+# nip.io is a public wildcard-DNS service: any subdomain resolves to the IP
+# embedded in it, so "<bucket>.127.0.0.1.nip.io" resolves to 127.0.0.1 with
+# no local hosts-file entry needed — used because this dev machine has no
+# admin access to edit the Windows hosts file for a per-bucket vhost entry.
+index = "index.html"
+
+[admin]
+api_bind_addr = "[::]:3903"
